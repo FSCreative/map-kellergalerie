@@ -118,3 +118,8 @@ app.get('/robots.txt', (req, res) => {
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.end('User-agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: ' + BASE_URL + '/sitemap.xml\n');
 });
+
+// Asset-Version fuer Cache-Busting (aendert sich pro Deployment)
+const ASSET_V = (process.env.RAILWAY_GIT_COMMIT_SHA || String(Date.now())).slice(0, 8);
+const prevLocals2 = app.locals;
+app.locals = req => Object.assign(prevLocals2(req), { assetV: ASSET_V });
