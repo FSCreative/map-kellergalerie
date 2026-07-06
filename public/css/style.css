@@ -393,8 +393,7 @@ input[type="file"] { padding: 9px; background: #fff; }
 
 /* ---------- Mobile-Feinschliff ---------- */
 @media (max-width: 720px) {
-    /* Fix: Menue-Drawer volle Hoehe (backdrop-filter des Headers ist Bezugsrahmen fuer position:fixed) */
-  .main-nav { top: 0; bottom: auto; height: 100vh; height: 100dvh; }
+  /* Fix: Menue-Drawer volle Hoehe (backdrop-filter des Headers ist Bezugsrahmen fuer position:fixed) */  .main-nav { top: 0; bottom: auto; height: 100vh; height: 100dvh; }
     /* Kategorie-Filter als wischbare Zeile */
   .filter-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
     .filter-bar::-webkit-scrollbar { display: none; }
@@ -414,3 +413,6 @@ input[type="file"] { padding: 9px; background: #fff; }
     .quote-band::before { font-size: 12rem; }
     .hero-title { font-size: clamp(2.6rem, 13vw, 3.6rem); }
 }
+
+/* Logo im Header nicht rund zuschneiden */
+.brand-logo { border-radius: 4px; border: none; }
