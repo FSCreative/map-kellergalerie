@@ -1,0 +1,26 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container">
+      <p class="breadcrumb"><a href="/admin">← Admin-Übersicht</a></p>
+      <div class="admin-head-row">
+        <h1>Ausstellungen</h1>
+        <a href="/admin/ausstellungen/neu" class="btn btn-dark">+ Neue Ausstellung</a>
+      </div>
+      <div class="admin-list">
+        <% exhibitions.forEach(ex => { %>
+        <a href="/admin/ausstellungen/<%= ex.slug %>" class="admin-list-item">
+          <div class="admin-list-thumb"><% if (ex.images.length) { %><img src="<%= ex.images[0] %>" alt=""><% } %></div>
+          <div class="admin-list-info">
+            <strong><%= ex.title %></strong>
+            <span><%= formatDate(ex.date) %> · <%= ex.category %> · <%= ex.images.length %> Bilder</span>
+          </div>
+          <span class="admin-list-edit">Bearbeiten →</span>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

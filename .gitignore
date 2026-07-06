@@ -1,0 +1,5 @@
+node_modules/
+data-live/
+.env
+.DS_Store
+npm-debug.log*

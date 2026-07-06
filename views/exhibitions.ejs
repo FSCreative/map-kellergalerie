@@ -1,0 +1,37 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1 class="reveal">Ausstellungen</h1>
+      <p class="lead reveal">Alle Infos und Fotos vergangener Ausstellungen und Veranstaltungen.</p>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="filter-bar reveal" id="filterBar">
+        <button class="chip active" data-filter="alle">Alle</button>
+        <% categories.forEach(cat => { %>
+        <button class="chip" data-filter="<%= cat %>"><%= cat %></button>
+        <% }) %>
+      </div>
+      <div class="card-grid" id="exGrid">
+        <% exhibitions.forEach((ex, i) => { %>
+        <a href="/ausstellungen/<%= ex.slug %>" class="card reveal" data-cats="<%= ex.category %>">
+          <div class="card-media">
+            <% if (ex.images.length) { %><img src="<%= ex.images[0] %>" alt="<%= ex.title %>" loading="lazy"><% } %>
+            <span class="card-cat"><%= ex.category %></span>
+          </div>
+          <div class="card-body">
+            <h3><%= ex.title %></h3>
+            <% if (ex.subtitle) { %><p class="card-sub"><%= ex.subtitle %></p><% } %>
+            <p class="card-date"><%= formatDate(ex.date) %></p>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

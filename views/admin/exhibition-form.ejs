@@ -1,0 +1,61 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container narrow">
+      <p class="breadcrumb"><a href="/admin/ausstellungen">← Alle Ausstellungen</a></p>
+      <h1><%= isNew ? 'Neue Ausstellung' : 'Ausstellung bearbeiten' %></h1>
+      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert – Änderungen sind online.</p><% } %>
+
+      <form method="post" action="<%= isNew ? '/admin/ausstellungen/neu' : '/admin/ausstellungen/' + ex.slug %>" enctype="multipart/form-data" class="admin-form">
+        <label>Titel<input type="text" name="title" value="<%= ex.title %>" required></label>
+        <label>Untertitel<input type="text" name="subtitle" value="<%= ex.subtitle %>"></label>
+        <div class="form-row">
+          <label>Datum<input type="date" name="date" value="<%= ex.date %>" required></label>
+          <label>Kategorie<input type="text" name="category" value="<%= ex.category %>" list="catlist" placeholder="z.B. Malerei und Zeichnungen">
+            <datalist id="catlist">
+              <option>Malerei und Zeichnungen</option><option>Fotografie</option><option>Druckgraphiken</option>
+              <option>Skulpturen</option><option>Keramik</option><option>Textilien</option><option>Installationen</option>
+              <option>Lesungen</option><option>Musik, Konzert</option><option>Film</option><option>Allgemein</option>
+            </datalist>
+          </label>
+        </div>
+        <label>Autor / erstellt von<input type="text" name="author" value="<%= ex.author %>"></label>
+        <label>Text (Absätze durch Leerzeile trennen)<textarea name="text" rows="10"><%= ex.body.join('\n\n') %></textarea></label>
+        <label>Neue Fotos hochladen (Mehrfachauswahl möglich)<input type="file" name="images" accept="image/*" multiple></label>
+        <button type="submit" class="btn btn-dark"><%= isNew ? 'Anlegen' : 'Speichern' %></button>
+        <% if (!isNew) { %><a href="/ausstellungen/<%= ex.slug %>" class="btn btn-outline" target="_blank">Seite ansehen ↗</a><% } %>
+      </form>
+
+      <% if (!isNew && ex.images.length) { %>
+      <h2 class="mt">Fotos (<%= ex.images.length %>)</h2>
+      <p class="note">Das erste Bild ist das Titelbild.</p>
+      <div class="admin-img-grid">
+        <% ex.images.forEach((img, i) => { %>
+        <div class="admin-img-cell">
+          <img src="<%= img %>" alt="Bild <%= i + 1 %>">
+          <div class="admin-img-actions">
+            <form method="post" action="/admin/ausstellungen/<%= ex.slug %>/bild">
+              <input type="hidden" name="index" value="<%= i %>">
+              <% if (i > 0) { %>
+                <button name="action" value="cover" title="Als Titelbild">★</button>
+                <button name="action" value="up" title="Nach vorne">↑</button>
+              <% } %>
+              <button name="action" value="delete" title="Löschen" onclick="return confirm('Bild wirklich löschen?')">✕</button>
+            </form>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <% } %>
+
+      <% if (!isNew) { %>
+      <form method="post" action="/admin/ausstellungen/<%= ex.slug %>/loeschen" class="mt danger-zone"
+            onsubmit="return confirm('Diese Ausstellung samt allen Bildern wirklich löschen?')">
+        <button type="submit" class="btn btn-danger">Ausstellung löschen</button>
+      </form>
+      <% } %>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

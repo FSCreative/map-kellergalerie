@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <article class="section exhibition-detail">
+    <div class="container narrow">
+      <p class="breadcrumb reveal"><a href="/ausstellungen">← Alle Ausstellungen</a></p>
+      <p class="section-kicker reveal"><%= ex.category %> · <%= formatDate(ex.date) %></p>
+      <h1 class="reveal"><%= ex.title %></h1>
+      <% if (ex.subtitle) { %><p class="lead reveal"><%= ex.subtitle %></p><% } %>
+      <% ex.body.forEach(p => { %><p class="body-text reveal"><%= p %></p><% }) %>
+    </div>
+    <% if (ex.images.length) { %>
+    <div class="container">
+      <div class="gallery" id="gallery">
+        <% ex.images.forEach((img, i) => { %>
+        <figure class="gallery-item reveal <%= i === 0 ? 'wide' : '' %>">
+          <img src="<%= img %>" alt="<%= ex.title %> – Bild <%= i + 1 %>" loading="lazy" data-lightbox="<%= i %>">
+        </figure>
+        <% }) %>
+      </div>
+    </div>
+    <% } %>
+    <div class="container narrow">
+      <div class="detail-nav">
+        <% if (older) { %><a href="/ausstellungen/<%= older.slug %>" class="detail-nav-link">← <%= older.title %></a><% } else { %><span></span><% } %>
+        <% if (newer) { %><a href="/ausstellungen/<%= newer.slug %>" class="detail-nav-link next"><%= newer.title %> →</a><% } %>
+      </div>
+    </div>
+  </article>
+</main>
+<%- include('partials/footer') %>

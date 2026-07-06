@@ -1,0 +1,64 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container narrow">
+      <p class="breadcrumb"><a href="/admin">← Admin-Übersicht</a></p>
+      <h1>Team &amp; Sponsoren</h1>
+      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert.</p><% } %>
+
+      <h2>Team</h2>
+      <div class="admin-list">
+        <% team.forEach(t => { %>
+        <form method="post" action="/admin/team/<%= t.id %>" enctype="multipart/form-data" class="admin-list-item admin-inline-form">
+          <div class="admin-list-thumb round"><% if (t.image) { %><img src="<%= t.image %>" alt=""><% } %></div>
+          <div class="admin-list-info">
+            <input type="text" name="name" value="<%= t.name %>" placeholder="Name">
+            <input type="text" name="role" value="<%= t.role %>" placeholder="Funktion">
+            <input type="file" name="image" accept="image/*">
+          </div>
+          <div class="admin-inline-actions">
+            <button type="submit" class="btn btn-small btn-dark">Speichern</button>
+            <button type="submit" name="action" value="delete" class="btn btn-small btn-danger" onclick="return confirm('Teammitglied löschen?')">✕</button>
+          </div>
+        </form>
+        <% }) %>
+      </div>
+      <h3>Neues Teammitglied</h3>
+      <form method="post" action="/admin/team/neu" enctype="multipart/form-data" class="admin-form admin-add-form">
+        <div class="form-row">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Funktion<input type="text" name="role"></label>
+        </div>
+        <label>Foto<input type="file" name="image" accept="image/*"></label>
+        <button type="submit" class="btn btn-dark">Hinzufügen</button>
+      </form>
+
+      <h2 class="mt">Sponsoren</h2>
+      <div class="admin-list">
+        <% sponsors.forEach(s => { %>
+        <form method="post" action="/admin/sponsoren/<%= s.id %>" enctype="multipart/form-data" class="admin-list-item admin-inline-form">
+          <div class="admin-list-thumb contain"><% if (s.image) { %><img src="<%= s.image %>" alt=""><% } %></div>
+          <div class="admin-list-info">
+            <input type="text" name="name" value="<%= s.name %>" placeholder="Name (optional)">
+            <input type="file" name="image" accept="image/*">
+          </div>
+          <div class="admin-inline-actions">
+            <button type="submit" class="btn btn-small btn-dark">Speichern</button>
+            <button type="submit" name="action" value="delete" class="btn btn-small btn-danger" onclick="return confirm('Sponsor löschen?')">✕</button>
+          </div>
+        </form>
+        <% }) %>
+      </div>
+      <h3>Neuer Sponsor</h3>
+      <form method="post" action="/admin/sponsoren/neu" enctype="multipart/form-data" class="admin-form admin-add-form">
+        <div class="form-row">
+          <label>Name (optional)<input type="text" name="name"></label>
+          <label>Logo<input type="file" name="image" accept="image/*" required></label>
+        </div>
+        <button type="submit" class="btn btn-dark">Hinzufügen</button>
+      </form>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

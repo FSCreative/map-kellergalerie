@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4><%= site.siteName %></h4>
+      <p><%= site.orgName %></p>
+      <p><%= site.address %></p>
+      <p>ZVR-Zahl: <%= site.zvr %></p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <p><a href="mailto:<%= site.email %>"><%= site.email %></a></p>
+      <p><a href="tel:<%= site.phone.replace(/\s/g,'') %>"><%= site.phone %></a></p>
+      <p><a href="<%= site.facebook %>" target="_blank" rel="noopener">Facebook ↗</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Öffnungszeiten</h4>
+      <p><%= site.openingHours %></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <%= new Date().getFullYear() %> <%= site.siteName %></span>
+    <span class="footer-admin">
+      <% if (isAdmin) { %>
+        <a href="/admin">Admin-Bereich</a> ·
+        <form method="post" action="/admin/logout" class="inline-form"><button type="submit" class="linklike">Abmelden</button></form>
+      <% } else { %>
+        <a href="/admin/login">Admin</a>
+      <% } %>
+    </span>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" aria-label="Schließen">×</button>
+  <button class="lb-prev" aria-label="Vorheriges Bild">‹</button>
+  <img src="" alt="">
+  <button class="lb-next" aria-label="Nächstes Bild">›</button>
+  <div class="lb-caption"></div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,927 @@
+{
+ "site": {
+  "siteName": "MAP Kellergalerie",
+  "orgName": "MAP (Montafoner Artgenossen Plattform)",
+  "metaDescription": "Die MAP Kellergalerie stellt nationale und internationale Künstler aus. Es finden 4 - 5 Ausstellungen pro Jahr statt.",
+  "logo": "/images/logo.jpg",
+  "heroImage": "/images/hero.jpg",
+  "heroCredit": "©Gohar Martirosyan",
+  "heroTitle": "MAP Kellergalerie",
+  "heroSubtitle": "Kunst im Herzen des Montafons — nationale und internationale Künstler:innen in Schruns",
+  "aboutText": "Dr. Johann Trippolt - ein kunstinteressierter Arzt aus Schruns, begann 1999 in seinen Ordinationsräumen Bilder und Grafiken auszustellen. Später folgte der Ausbau der Kellerräume zu einer Galerie. Diese wurde unter dem Namen \"MontArtPhon\" betrieben und es fanden regelmäßige Ausstellungen in diesen Räumlichkeiten statt. 2021 erfolgte die Umwandlung in einen Verein. Der Name MAP wurde auf den Unterbegriff \"Montafoner Artgenossen Plattform\" geändert. Jährlich werden ca. 4 - 5 Ausstellungen und sonstige Kulturververanstaltungen organisiert. 2024 feiert die MAP ihr 25-jähriges Bestehen.",
+  "aboutHeaderImage": "/images/about-header.jpg",
+  "aboutHeaderCredit": "Foto: © Matthias Braudisch, aus der Ausstellung vom Juli 2022",
+  "teamMotto": "Der Kunst gewidmet",
+  "quote": "Die Welt ist nichts als eine Leinwand für unsere Vorstellungskraft",
+  "quoteAuthor": "Henry David Thoreau",
+  "openingHours": "Während laufenden Ausstellungen jeweils FR, SA, SO von 17:00 bis 19:00 Uhr. Änderungen vorbehalten.",
+  "address": "Bahnhofstraße 12, A-6780 Schruns, Österreich",
+  "email": "info@map-kellergalerie.at",
+  "phone": "+43 650 7416129",
+  "facebook": "https://www.facebook.com/montartphon",
+  "zvr": "1693702735",
+  "sommerbar": "http://sommerbar.at",
+  "publicationsIntro": "Veröffentlichungen der MAP Kellergalerie. Bücher und Kataloge können auf Anfrage gerne bei uns erworben werden.",
+  "sponsorsIntro": "Wir danken unseren Sponsoren und der öffentlichen Hand, die unsere Projekte und Ausstellungen immer wieder wohlwollend unterstützen."
+ },
+ "exhibitions": [
+  {
+   "slug": "eva-horschlager",
+   "title": "Eva Hörschläger",
+   "subtitle": "",
+   "date": "2026-05-21",
+   "category": "Druckgraphiken",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/eva-hoerschlaeger-cover.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-1.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-2.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-3.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-4.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-5.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-6.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-7.jpg",
+    "/images/exhibitions/eva-hoerschlaeger-8.jpg"
+   ]
+  },
+  {
+   "slug": "buchprasentation",
+   "title": "Buchpräsentation",
+   "subtitle": "Manfred Schlatter, Photographien 2000 - 2025",
+   "date": "2026-04-09",
+   "category": "Fotografie",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/buchpraesentation-cover.jpg"
+   ]
+  },
+  {
+   "slug": "viermalschlatter",
+   "title": "viermalschlatter",
+   "subtitle": "an der Schnittstelle zwischen Kunst, Kultur und weiteren Kraftfeldern",
+   "date": "2026-03-16",
+   "category": "Fotografie, Malerei und Zeichnungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/viermalschlatter-cover.jpg",
+    "/images/exhibitions/viermalschlatter-1.jpg",
+    "/images/exhibitions/viermalschlatter-2.jpg",
+    "/images/exhibitions/viermalschlatter-3.jpg",
+    "/images/exhibitions/viermalschlatter-4.jpg",
+    "/images/exhibitions/viermalschlatter-5.jpg",
+    "/images/exhibitions/viermalschlatter-6.jpg",
+    "/images/exhibitions/viermalschlatter-7.jpg",
+    "/images/exhibitions/viermalschlatter-8.jpg"
+   ]
+  },
+  {
+   "slug": "frauen-zimmer",
+   "title": "frauen.zimmer",
+   "subtitle": "3 Räume - 3 Frauen - 3 Positionen",
+   "date": "2026-01-21",
+   "category": "Malerei und Zeichnungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/frauen-zimmer-cover.jpg",
+    "/images/exhibitions/frauen-zimmer-1.jpg",
+    "/images/exhibitions/frauen-zimmer-2.jpg",
+    "/images/exhibitions/frauen-zimmer-3.jpg",
+    "/images/exhibitions/frauen-zimmer-4.jpg",
+    "/images/exhibitions/frauen-zimmer-5.jpg",
+    "/images/exhibitions/frauen-zimmer-6.jpg",
+    "/images/exhibitions/frauen-zimmer-7.jpg",
+    "/images/exhibitions/frauen-zimmer-8.jpg"
+   ]
+  },
+  {
+   "slug": "programm-dezember-2025",
+   "title": "Autorenlesung",
+   "subtitle": "Karlheinz Pichler",
+   "date": "2025-12-07",
+   "category": "Lesungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/programm-dezember-2025-cover.jpg",
+    "/images/exhibitions/programm-dezember-2025-1.jpg",
+    "/images/exhibitions/programm-dezember-2025-2.jpg",
+    "/images/exhibitions/programm-dezember-2025-3.jpg",
+    "/images/exhibitions/programm-dezember-2025-4.jpg",
+    "/images/exhibitions/programm-dezember-2025-5.jpg",
+    "/images/exhibitions/programm-dezember-2025-6.jpg"
+   ]
+  },
+  {
+   "slug": "larcher",
+   "title": "Larcher",
+   "subtitle": "Peter Adrian Larcher (1955 - 2024)",
+   "date": "2025-11-03",
+   "category": "Malerei und Zeichnungen",
+   "body": [
+    "https://kultur-online.net/inhalt/zeichnungen-von-peter-adrian-larcher"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/larcher-cover.jpg",
+    "/images/exhibitions/larcher-1.jpg",
+    "/images/exhibitions/larcher-2.jpg",
+    "/images/exhibitions/larcher-3.jpg",
+    "/images/exhibitions/larcher-4.jpg",
+    "/images/exhibitions/larcher-5.jpg",
+    "/images/exhibitions/larcher-6.jpg",
+    "/images/exhibitions/larcher-7.jpg",
+    "/images/exhibitions/larcher-8.jpg"
+   ]
+  },
+  {
+   "slug": "therese-eisenmann",
+   "title": "Therese Eisenmann",
+   "subtitle": "LANDsEND",
+   "date": "2025-09-10",
+   "category": "Druckgraphiken",
+   "body": [
+    "https://www.dorftv.at/video/47296"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/therese-eisenmann-cover.jpg",
+    "/images/exhibitions/therese-eisenmann-1.jpg",
+    "/images/exhibitions/therese-eisenmann-2.jpg",
+    "/images/exhibitions/therese-eisenmann-3.jpg",
+    "/images/exhibitions/therese-eisenmann-4.jpg",
+    "/images/exhibitions/therese-eisenmann-5.jpg",
+    "/images/exhibitions/therese-eisenmann-6.jpg",
+    "/images/exhibitions/therese-eisenmann-7.jpg",
+    "/images/exhibitions/therese-eisenmann-8.jpg"
+   ]
+  },
+  {
+   "slug": "herbstprogramm-2025",
+   "title": "Herbstprogramm 2025",
+   "subtitle": "",
+   "date": "2025-09-03",
+   "category": "Allgemein",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/herbstprogramm-2025-cover.jpg",
+    "/images/exhibitions/herbstprogramm-2025-1.jpg",
+    "/images/exhibitions/herbstprogramm-2025-2.jpg"
+   ]
+  },
+  {
+   "slug": "peter-raneburger",
+   "title": "Peter Raneburger",
+   "subtitle": "deep in the GROUND",
+   "date": "2025-04-14",
+   "category": "Malerei und Zeichnungen",
+   "body": [
+    "https://kultur-online.net/inhalt/mit-pinsel-und-farbe-den-abgruenden-der-menschlichen-seele-auf-der-spur"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/peter-raneburger-cover.jpg",
+    "/images/exhibitions/peter-raneburger-1.jpg",
+    "/images/exhibitions/peter-raneburger-2.jpg",
+    "/images/exhibitions/peter-raneburger-3.jpg",
+    "/images/exhibitions/peter-raneburger-4.jpg",
+    "/images/exhibitions/peter-raneburger-5.jpg",
+    "/images/exhibitions/peter-raneburger-6.jpg",
+    "/images/exhibitions/peter-raneburger-7.jpg",
+    "/images/exhibitions/peter-raneburger-8.jpg"
+   ]
+  },
+  {
+   "slug": "struktur-volumen",
+   "title": "Struktur & Volumen",
+   "subtitle": "Oliver Bischof, Gabriele Bösch, Alois Galehr, Christine Lingg, Norbert Müller, Hermann Präg, Birgit Pleschberger, Anna Amanda Steurer, Georg Vith",
+   "date": "2024-09-05",
+   "category": "Malerei und Zeichnungen, Fotografie, Druckgraphiken",
+   "body": [
+    "Ausstellungseröffnung 12.09.2024"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/struktur-volumen-cover.jpg",
+    "/images/exhibitions/struktur-volumen-1.jpg",
+    "/images/exhibitions/struktur-volumen-2.jpg",
+    "/images/exhibitions/struktur-volumen-3.jpg",
+    "/images/exhibitions/struktur-volumen-4.jpg",
+    "/images/exhibitions/struktur-volumen-5.jpg",
+    "/images/exhibitions/struktur-volumen-6.jpg",
+    "/images/exhibitions/struktur-volumen-7.jpg",
+    "/images/exhibitions/struktur-volumen-8.jpg"
+   ]
+  },
+  {
+   "slug": "lukas-seeber-quintett",
+   "title": "Lukas Seeber Quintett",
+   "subtitle": "Konzert im Rahmen der 25 Jahr-Feier der MAP Galerie",
+   "date": "2024-07-13",
+   "category": "Musik, Konzert",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/lukas-seeber-quintett-cover.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-1.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-2.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-3.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-4.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-5.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-6.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-7.jpg",
+    "/images/exhibitions/lukas-seeber-quintett-8.jpg"
+   ]
+  },
+  {
+   "slug": "hubert-dragaschnig-liest-k",
+   "title": "Hubert Dragaschnig liest K.",
+   "subtitle": "Musikalische Umrahmung Herwig Hammerl Trio",
+   "date": "2024-07-09",
+   "category": "Lesungen",
+   "body": [
+    "Ein Abend für Franz K.",
+    "Anlässlich des 100 Todestages von Franz Kafka (1883 – 1924) liest Hubert Dragaschnig aus Erzählungen. Musikalisch begleitet wird er von einem Trio bestehend aus Herwig Hammerl, Peter Madsen und Martin Grabher. Zu hören gibt es Blues, melancholische Balladen und kafkaeske Improvisationen.",
+    "Krankheit, Selbstzweifel und eine qualvolle Beziehung zum Vater prägten Kafkas Leben. Doch sein Leid war gleichzeitig der Quell seines Schaffens. Er war ein Schriftsteller, der bis zuletzt Angst vor dem Scheitern hatte – und so ein einzigartiges Werk schuf.",
+    "„Ich habe kein literarisches Interesse, sondern bestehe aus Literatur, ich bin nichts anderes und kann nichts anderes sein.“ (Brief an Felice Bauer 1913)",
+    "ES LIEST Hubert Dragaschnig",
+    "MUSIK Herwig Hammerl | Bass, Komposition Peter Madsen | Piano Martin Grabher | Drums",
+    "Hubert Dragaschnig, Autor und Regisseur, Gründer und künstlerischer Leiter des Theater KOSMOS. Lebt in Bregenz."
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/hubert-dragaschnig-liest-k-cover.jpg",
+    "/images/exhibitions/hubert-dragaschnig-liest-k-1.jpg",
+    "/images/exhibitions/hubert-dragaschnig-liest-k-2.jpg",
+    "/images/exhibitions/hubert-dragaschnig-liest-k-3.jpg"
+   ]
+  },
+  {
+   "slug": "25-jahre-map-kellergalerie",
+   "title": "25 Jahre MAP Kellergalerie",
+   "subtitle": "Die MAP Galerie feiert ihr 25-jähriges Bestehen. Wir möchten dies zum Anlass nehmen, das Jubiläum mit einem umfangreichen Kulturprogramm mit Ihnen zu feiern.",
+   "date": "2024-07-01",
+   "category": "Allgemein",
+   "body": [
+    "Programm:",
+    "Eröffnung der Festwoche am 04.07.2024",
+    "Konzert mit Dark Venus am 05. Juli auf der Kulturbühne",
+    "Weinverkostung mit Karl Brindlmayer und anschließendem Konzert von LIQUID LUNCH",
+    "Film \"Pollock\" von und mit Ed Harris im Garten der MAP"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/25-jahre-map-kellergalerie-cover.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-1.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-2.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-3.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-4.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-5.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-6.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-7.jpg",
+    "/images/exhibitions/25-jahre-map-kellergalerie-8.jpg"
+   ]
+  },
+  {
+   "slug": "gabi-jorger-christian-thanhauser",
+   "title": "Gabi Jörger & Christian Thanhäuser",
+   "subtitle": "Ausflug ins Gebirge",
+   "date": "2024-05-16",
+   "category": "Druckgraphiken",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-cover.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-1.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-2.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-3.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-4.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-5.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-6.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-7.jpg",
+    "/images/exhibitions/gabi-joerger-christian-thanhaeuser-8.jpg"
+   ]
+  },
+  {
+   "slug": "artashes-hunanyan",
+   "title": "Artashes Hunanyan",
+   "subtitle": "1922 - 1994",
+   "date": "2024-04-09",
+   "category": "Malerei und Zeichnungen",
+   "body": [
+    "Dauer der Ausstellung 12 04. - 12.05. 2024",
+    "Öffnungszeiten: FR, SA, SO von 17.00 - 19.00 Uhr",
+    "https://kultur-online.net/inhalt/ueber-den-kubismus-und-surrealismus-bis-zur-realen-landschaft",
+    "Buchpräsentation - 18.04.2024"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/artashes-hunanyan-cover.jpg",
+    "/images/exhibitions/artashes-hunanyan-1.jpg",
+    "/images/exhibitions/artashes-hunanyan-2.jpg",
+    "/images/exhibitions/artashes-hunanyan-3.jpg",
+    "/images/exhibitions/artashes-hunanyan-4.jpg",
+    "/images/exhibitions/artashes-hunanyan-5.jpg",
+    "/images/exhibitions/artashes-hunanyan-6.jpg",
+    "/images/exhibitions/artashes-hunanyan-7.jpg",
+    "/images/exhibitions/artashes-hunanyan-8.jpg"
+   ]
+  },
+  {
+   "slug": "klaus-pichler-maren-jeleff",
+   "title": "Klaus Pichler & Maren Jeleff",
+   "subtitle": "TOO CLOSE TO NOTICE",
+   "date": "2024-01-17",
+   "category": "Fotografie",
+   "body": [
+    "Ausstellungseröffnung: 18.01.2024 Dauer der Ausstellung: 19.01. - 18.02.2024",
+    "FR, SA, SO von 17.00 - 19.00 Uhr"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/klaus-pichler-maren-jeleff-cover.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-1.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-2.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-3.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-4.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-5.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-6.jpg",
+    "/images/exhibitions/klaus-pichler-maren-jeleff-7.jpg"
+   ]
+  },
+  {
+   "slug": "mappenwerke",
+   "title": "Markus Vallazza",
+   "subtitle": "Mappenwerke",
+   "date": "2023-11-23",
+   "category": "Druckgraphiken",
+   "body": [
+    "Wer sich mit dem Radieren einmal eingelassen hat, kommt nicht mehr davon los. Es ist wie eine Droge, von der man nicht lassen kann.",
+    "(Markus Vallazza)",
+    "Die MAP Kellergalerie würdigt in ihrer letzten Ausstellung des Jahres den Südtiroler Künstler Markus Vallazza (1936 - 2019), in dessen Zentrum des künstlerischen Schaffens die Radierung steht.",
+    "Nach seinem Studium in Florenz 1966 begann er mit den druck-graphischen Arbeiten, die er anfänglich selbst auf einer eigenen Presse vervielfältigte.",
+    "Auf Anregungen von Freunden hin fertigte er in Folge eine Vielzahl von Mappenwerken an, die Bezug auf literarische Vorlagen nahmen, so u.a. Horaz, George Orwell, E.A. Poe oder Arthur Rimbaud.",
+    "Der deutsche Kunsthistoriker Peter Weiermair schreibt dazu, dass Vallazza nicht Iustrator ist, sondern ein subjektiver Kommentator wesentlicher Werke der Weltliteratur, die er zum Ausgangspunkt seiner phantastischen Bilderzählungen macht.",
+    "Sämtliche gezeigten Mappenwerke wurden uns freundlicherweise von der SAMMLUNG MONTAFON zur Verfügung gestellt. Ergänzt werden die radierten Zyklen mit Originalzeichnungen, welche uns von der Galerie Mathias Mayr in Innsbruck überlassen wurden.",
+    "Ausstellungsdauer: 24.11. bis 23.12.2023",
+    "Offnungszeiten: FR, SA, SO 17:00 - 19:00 Uhr",
+    "Eröffnung: DO 23.11. um 19:30 Uhr"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/mappenwerke-cover.jpg",
+    "/images/exhibitions/mappenwerke-1.jpg",
+    "/images/exhibitions/mappenwerke-2.jpg",
+    "/images/exhibitions/mappenwerke-3.jpg"
+   ]
+  },
+  {
+   "slug": "keramik-glas-und-graphik",
+   "title": "KERAMIK, GLAS UND GRAPHIK",
+   "subtitle": "Dauer der Ausstellung - 21.09. bis 22.10.2023 Öffnungszeiten - FR, SA, SO jeweils 17:00 bis 19:00 Uhr",
+   "date": "2023-09-20",
+   "category": "Keramik, Malerei und Zeichnungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/keramik-glas-und-graphik-cover.jpg",
+    "/images/exhibitions/keramik-glas-und-graphik-1.jpg",
+    "/images/exhibitions/keramik-glas-und-graphik-2.jpg",
+    "/images/exhibitions/keramik-glas-und-graphik-3.jpg",
+    "/images/exhibitions/keramik-glas-und-graphik-4.jpg",
+    "/images/exhibitions/keramik-glas-und-graphik-5.jpg"
+   ]
+  },
+  {
+   "slug": "dietmar-schlatter-buchprasentation",
+   "title": "Dietmar Schlatter",
+   "subtitle": "Buchpräsentation \"In my young life\"",
+   "date": "2023-03-29",
+   "category": "Lesungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/dietmar-schlatter-buchpraesentation-cover.jpg",
+    "/images/exhibitions/dietmar-schlatter-buchpraesentation-1.jpg",
+    "/images/exhibitions/dietmar-schlatter-buchpraesentation-2.jpg",
+    "/images/exhibitions/dietmar-schlatter-buchpraesentation-3.jpg"
+   ]
+  },
+  {
+   "slug": "austellungstitel",
+   "title": "Cecilia Gatehouse & Nunzio de Martino",
+   "subtitle": "",
+   "date": "2023-02-09",
+   "category": "Textilien",
+   "body": [
+    "Die gebürtige Schwedin Cecilia Gatehouse zeigt neuere Arbeiten mit Draht, Stoff und Perlen.",
+    "Der italiensche Künstler Nunzio de Martino ist ebenfalls mit textilen Arbeiten in dieser Ausstellung vertreten. Er bearbeitet Leinwände mit einer alten Nähmaschine, zeichnet mit Polyesterfäden oder schafft eine gewisse Dreidimensionalität, indem er Fäden wieder entfernt oder eine weitere Textischicht durch Überlappung schafft."
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/austellungstitel-cover.jpg",
+    "/images/exhibitions/austellungstitel-1.jpg",
+    "/images/exhibitions/austellungstitel-2.jpg",
+    "/images/exhibitions/austellungstitel-3.jpg",
+    "/images/exhibitions/austellungstitel-4.jpg",
+    "/images/exhibitions/austellungstitel-5.jpg",
+    "/images/exhibitions/austellungstitel-6.jpg",
+    "/images/exhibitions/austellungstitel-7.jpg",
+    "/images/exhibitions/austellungstitel-8.jpg"
+   ]
+  },
+  {
+   "slug": "anne-marie-jakob-verschiebungen",
+   "title": "Anne Marie Jakob",
+   "subtitle": "Verschiebungen",
+   "date": "2022-09-22",
+   "category": "Malerei und Zeichnungen, Installationen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-cover.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-1.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-2.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-3.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-4.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-5.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-6.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-7.jpg",
+    "/images/exhibitions/anne-marie-jakob-verschiebungen-8.jpg"
+   ]
+  },
+  {
+   "slug": "shahane-shabazyan-der-schmerz",
+   "title": "Shahane Shabazyan",
+   "subtitle": "Der Schmerz",
+   "date": "2022-07-07",
+   "category": "Druckgraphiken",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-cover.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-1.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-2.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-3.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-4.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-5.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-6.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-7.jpg",
+    "/images/exhibitions/shahane-shabazyan-der-schmerz-8.jpg"
+   ]
+  },
+  {
+   "slug": "paul-renner",
+   "title": "Paul Renner",
+   "subtitle": "Die Dionysos-Dithyramben",
+   "date": "2021-10-06",
+   "category": "Malerei und Zeichnungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/paul-renner-cover.jpg",
+    "/images/exhibitions/paul-renner-1.jpg",
+    "/images/exhibitions/paul-renner-2.jpg",
+    "/images/exhibitions/paul-renner-3.jpg",
+    "/images/exhibitions/paul-renner-4.jpg",
+    "/images/exhibitions/paul-renner-5.jpg",
+    "/images/exhibitions/paul-renner-6.jpg",
+    "/images/exhibitions/paul-renner-7.jpg",
+    "/images/exhibitions/paul-renner-8.jpg"
+   ]
+  },
+  {
+   "slug": "philipp-schonborn-annette-philp",
+   "title": "Philipp Schönborn & Annette Philp",
+   "subtitle": "Kunst als Motiv",
+   "date": "2021-04-14",
+   "category": "Fotografie",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/philipp-schoenborn-annette-philp-cover.jpg"
+   ]
+  },
+  {
+   "slug": "wittwer-palacz",
+   "title": "Wittwer - Palacz",
+   "subtitle": "Im Fluss",
+   "date": "2020-09-16",
+   "category": "Malerei und Zeichnungen",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/wittwer-palacz-cover.jpg",
+    "/images/exhibitions/wittwer-palacz-1.jpg"
+   ]
+  },
+  {
+   "slug": "hermann-nitsch-fuge",
+   "title": "Hermann Nitsch",
+   "subtitle": "Fuge.",
+   "date": "2019-05-09",
+   "category": "Druckgraphiken",
+   "body": [
+    "Druckgraphiken und bedruckte Schüttbilder von Hermann Nitsch (Kurator Karl Peter)"
+   ],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/hermann-nitsch-fuge-cover.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-1.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-2.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-3.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-4.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-5.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-6.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-7.jpg",
+    "/images/exhibitions/hermann-nitsch-fuge-8.jpg"
+   ]
+  },
+  {
+   "slug": "gustav-peichl-ironimus",
+   "title": "Gustav Peichl - Ironimus",
+   "subtitle": "Karikaturen aus sechs Jahrzehnten",
+   "date": "2015-12-04",
+   "category": "Allgemein",
+   "body": [],
+   "author": "Manfred Schlatter",
+   "images": [
+    "/images/exhibitions/gustav-peichl-ironimus-cover.jpg",
+    "/images/exhibitions/gustav-peichl-ironimus-1.jpg",
+    "/images/exhibitions/gustav-peichl-ironimus-2.jpg",
+    "/images/exhibitions/gustav-peichl-ironimus-3.jpg",
+    "/images/exhibitions/gustav-peichl-ironimus-4.jpg",
+    "/images/exhibitions/gustav-peichl-ironimus-5.jpg"
+   ]
+  }
+ ],
+ "publications": [
+  {
+   "title": "H.T. (Hans Trippolt) – Kleinformat in Öl",
+   "details": "Softcover, 21 x 15 cm, 44 Seiten, hrsg. von Johann Trippolt",
+   "year": 2004,
+   "price": "EUR 10,00",
+   "isbn": "",
+   "image": "/images/publications/trippolt-2004.jpg",
+   "id": "h-t-hans-trippolt-kleinformat-in-ol",
+   "subtitle": "Hans Trippolt"
+  },
+  {
+   "title": "Das Goldene Vlies / Medea",
+   "details": "Softcover, 21 x 21 cm, 28 Seiten, hrsg. von M.H. Ganahl",
+   "year": 2008,
+   "price": "vergriffen",
+   "isbn": "",
+   "image": "/images/publications/ganahl-2008.jpg",
+   "id": "das-goldene-vlies-medea",
+   "subtitle": "Michael Hanno Ganahl"
+  },
+  {
+   "title": "Über dem Horizont",
+   "details": "Hardcover, 28,8 x 23,6 cm, 78 Seiten, hrsg. von Johann Trippolt",
+   "year": 2009,
+   "price": "EUR 25,00 / EUR 40,00 mit Künstlersignatur",
+   "isbn": "",
+   "image": "/images/publications/hoefinger-2009.jpg",
+   "id": "uber-dem-horizont",
+   "subtitle": "Oskar Höfinger"
+  },
+  {
+   "title": "Private Space",
+   "details": "Softcover, 14,8 x 21,2 cm, 6 Seiten, Beitrag von Charlotte Trippolt, hrsg. von Johann Trippolt",
+   "year": 2011,
+   "price": "vergriffen",
+   "isbn": "",
+   "image": "/images/publications/mihajlovic-2011.jpg",
+   "id": "private-space",
+   "subtitle": "Branislav Mihajlovic"
+  },
+  {
+   "title": "Vom Naturalismus zur Abstraktion",
+   "details": "Hardcover, 23,5 x 23,5 cm, 107 Seiten, hrsg. von Klaus Bertle, Johann Trippolt",
+   "year": 2010,
+   "price": "",
+   "isbn": "978-3-902225-39-9",
+   "image": "/images/publications/bertle-2010.jpg",
+   "id": "vom-naturalismus-zur-abstraktion",
+   "subtitle": "Hannes Bertle"
+  },
+  {
+   "title": "Der andere Blick.",
+   "details": "Broschüre Softcover, 21 x 14,7 cm, 14 Seiten, Dokumentation der Ausstellung, hrsg. Johann Trippolt",
+   "year": 2011,
+   "price": "vergriffen",
+   "isbn": "",
+   "image": "/images/publications/der-andere-blick-2011.jpg",
+   "id": "der-andere-blick",
+   "subtitle": "Bernhard Breuer, Gruber-Haumer, Hans Hohenfellner, Lang-Vonier"
+  },
+  {
+   "title": "Leise Betrachtungen",
+   "details": "Hardcover, 28,8 x 23,6 cm, 96 Seiten mit Beiträgen von Krista Vonbank und Bruno Winkler, hrsg. von Johann Trippolt",
+   "year": 2012,
+   "price": "EUR 25,00",
+   "isbn": "978-3-902225-47-4",
+   "image": "/images/publications/seilern-2012.jpg",
+   "id": "leise-betrachtungen",
+   "subtitle": "Paul Seilern – Zeichnungen"
+  },
+  {
+   "title": "Formation – Abstraktion",
+   "details": "Softcover, 17 x 24 cm, 76 Seiten, mit Beitrag von Thomas Gehrer, hrsg. Johann Trippolt",
+   "year": 2013,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/gehrer-2013.jpg",
+   "id": "formation-abstraktion",
+   "subtitle": "Emil Gehrer 1913–1992"
+  },
+  {
+   "title": "Sieger sind unsterblich – Künstler auch",
+   "details": "Dokumentation, Broschüre Softcover, 14,5 x 21 cm, 39 Seiten, hrsg. von Johann Trippolt",
+   "year": 2013,
+   "price": "EUR 10,00",
+   "isbn": "",
+   "image": "/images/publications/sieger-sind-unsterblich-2013.jpg",
+   "id": "sieger-sind-unsterblich-kunstler-auch",
+   "subtitle": ""
+  },
+  {
+   "title": "Von wilden Affen und schwarzen Schafen",
+   "details": "Broschüre Softcover, 21 x 14,5 cm, 56 Seiten, hrsg. von Johann Trippolt",
+   "year": 2013,
+   "price": "EUR 10,00",
+   "isbn": "",
+   "image": "/images/publications/marehart-2013.jpg",
+   "id": "von-wilden-affen-und-schwarzen-schafen",
+   "subtitle": "Eva Marehart"
+  },
+  {
+   "title": "Still – Leben",
+   "details": "Softcover, 20 x 28 cm, 90 Seiten, Beitrag von Lisa Hessenberger, hrsg. von Michael Kasper, Johann Trippolt",
+   "year": 2013,
+   "price": "EUR 25,00",
+   "isbn": "978-3-902225-53-5",
+   "image": "/images/publications/still-leben-2013.jpg",
+   "id": "still-leben",
+   "subtitle": "Max Alwin und Christian Lucas von Cranach"
+  },
+  {
+   "title": "serbi.arte",
+   "details": "Softcover, 16,5 x 22,5 cm, 55 Seiten, Beiträge von Ana Bogdanovic, Bruno Winkler, Charlotte Trippolt, hrsg. von Johann Trippolt",
+   "year": 2014,
+   "price": "",
+   "isbn": "978-3-9022",
+   "image": "/images/publications/serbi-arte-2014.jpg",
+   "id": "serbi-arte",
+   "subtitle": ""
+  },
+  {
+   "title": "serbi.arte – Die Dokumentation",
+   "details": "Softcover, Ringbindung, 21 x 29,50 cm, 57 Seiten, hrsg. von Manfred Schlatter, Bruno Winkler, Johann Trippolt",
+   "year": 2014,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/serbi-arte-doku-2014.jpg",
+   "id": "serbi-arte-die-dokumentation",
+   "subtitle": ""
+  },
+  {
+   "title": "Berg.Werke – Piz Buin & Co.",
+   "details": "Softcover, 17 x 24 cm, 100 Seiten, Beiträge von Michael Kasper, Andreas Rudigier, Bruno Winkler, hrsg. von Michael Kasper, Andreas Rudigier, Bruno Winkler, Johann Trippolt",
+   "year": 2015,
+   "price": "EUR 15,00",
+   "isbn": "",
+   "image": "/images/publications/berg-werke-2015.jpg",
+   "id": "berg-werke-piz-buin-co",
+   "subtitle": ""
+  },
+  {
+   "title": "Ironimus (Gustav Peichl) – Karikaturen aus sechs Jahrzehnten",
+   "details": "Softcover, 17 x 24 cm, 135 Seiten, Beitrag von Hans Haider, hrsg. von Johann Trippolt",
+   "year": 2015,
+   "price": "",
+   "isbn": "",
+   "image": "/images/publications/ironimus-2015.jpg",
+   "id": "ironimus-gustav-peichl-karikaturen-aus-sechs-jahrz",
+   "subtitle": "Gustav Peichl"
+  },
+  {
+   "title": "Wohin gehen wir? Immer nach Hause.",
+   "details": "Softcover, 17 x 24 cm, 44 Seiten, Beiträge von Bruno Winkler, Renate Wittwer, hrsg. Johann Trippolt",
+   "year": 2016,
+   "price": "",
+   "isbn": "",
+   "image": "/images/publications/wittwer-2016.jpg",
+   "id": "wohin-gehen-wir-immer-nach-hause",
+   "subtitle": "Renate Wittwer, Ernst Wittwer"
+  },
+  {
+   "title": "Stillstand",
+   "details": "Hardcover, 28,5 x 22,5 cm, 116 Seiten, Beiträge von Bruno Winkler, Michael Kasper, hrsg. von Manfred Schlatter und Johann Trippolt",
+   "year": 2016,
+   "price": "EUR 25,00",
+   "isbn": "9 7683902 225702",
+   "image": "/images/publications/stillstand-2016.jpg",
+   "id": "stillstand",
+   "subtitle": "Manfred Schlatter"
+  },
+  {
+   "title": "Vom dicken Strich zum dünnen Strich",
+   "details": "Softcover, 17 x 24 cm, 128 Seiten, hrsg. von Johann Trippolt",
+   "year": 2017,
+   "price": "EUR 15,00",
+   "isbn": "",
+   "image": "/images/publications/flora-2017.jpg",
+   "id": "vom-dicken-strich-zum-dunnen-strich",
+   "subtitle": "Paul Flora"
+  },
+  {
+   "title": "zwischen_raum_linien",
+   "details": "Softcover, Ringbindung, 17 x 24 cm, 24 Seiten, hrsg. von Johann Trippolt",
+   "year": 2018,
+   "price": "EUR 10,00",
+   "isbn": "",
+   "image": "/images/publications/mayr-2018.jpg",
+   "id": "zwischen-raum-linien",
+   "subtitle": "Mathias Mayr"
+  },
+  {
+   "title": "Leninakan – Gyumri",
+   "details": "Softcover, 23,9 x 30,50 cm, 92 Seiten, Beitrag von Levon Abrahamyan, hrsg. von Johann Trippolt",
+   "year": 2018,
+   "price": "EUR 25,00",
+   "isbn": "",
+   "image": "/images/publications/leninakan-gyumri-2018.jpg",
+   "id": "leninakan-gyumri",
+   "subtitle": ""
+  },
+  {
+   "title": "Gyumri und seine Künstler – Die Dokumentation",
+   "details": "Softcover, Ringbindung, 17 x 24 cm, 97 Seiten, hrsg. von Johann Trippolt",
+   "year": 2018,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/gyumri-kuenstler-2018.jpg",
+   "id": "gyumri-und-seine-kunstler-die-dokumentation",
+   "subtitle": ""
+  },
+  {
+   "title": "Erinnerungen",
+   "details": "Hardcover, 24,5 x 29,5 cm, 155 Seiten, Beiträge von Andreas Rudigier, Stefan Dietrich, Ruth Haas, Hubert Matt, hrsg. von Andreas Rudigier, Johann Trippolt",
+   "year": 2019,
+   "price": "EUR 25,00",
+   "isbn": "978-3-901802-43-0",
+   "image": "/images/publications/trippolt-erinnerungen-2019.jpg",
+   "id": "erinnerungen",
+   "subtitle": "Hans Trippolt (1919–2012)"
+  },
+  {
+   "title": "Im Fluss",
+   "details": "Softcover, 17 x 24 cm, 44 Seiten, Beitrag von Gabriel Ramin Shor, hrsg. von Johann Trippolt",
+   "year": 2020,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/im-fluss-2020.jpg",
+   "id": "im-fluss",
+   "subtitle": "Renate Wittwer, Inge Kerschbaumer-Palacz"
+  },
+  {
+   "title": "Travel:Shooter",
+   "details": "Softcover, 24 x 17 cm, 110 Seiten, Beitrag von Raffaela Rudigier-Gerer, hrsg. von Johann Trippolt und Manfred Schlatter",
+   "year": 2020,
+   "price": "EUR 15,00",
+   "isbn": "",
+   "image": "/images/publications/travel-shooter-2020.jpg",
+   "id": "travel-shooter",
+   "subtitle": "Manfred Schlatter"
+  },
+  {
+   "title": "Von Bäumen und Bergen",
+   "details": "Softcover, 17 x 24 cm, 168 Seiten, Beiträge von Walter Fink, Charlotte Trippolt, Helmut Graf, hrsg. von Johann Trippolt",
+   "year": 2022,
+   "price": "EUR 15,00",
+   "isbn": "",
+   "image": "/images/publications/trippolt-baeume-berge-2022.jpg",
+   "id": "von-baumen-und-bergen",
+   "subtitle": "Hans Trippolt"
+  },
+  {
+   "title": "Artashes Hunanyan",
+   "details": "Hardcover, 23,5 x 23,5 cm, 149 Seiten, Beitrag von Sona Andreasyan, Bruno Winkler, hrsg. von Sona Andreasyan, Johann Trippolt",
+   "year": 2024,
+   "price": "EUR 25,00",
+   "isbn": "",
+   "image": "/images/publications/hunanyan-2024.jpg",
+   "id": "artashes-hunanyan",
+   "subtitle": "Artashes Hunanyan"
+  },
+  {
+   "title": "Struktur & Volumen",
+   "details": "Softcover, 17 x 24 cm, 86 Seiten, mit Beiträgen von Künstlern und Künstlerinnen, hrsg. von Johann Trippolt",
+   "year": 2024,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/struktur-volumen-2024.jpg",
+   "id": "struktur-volumen",
+   "subtitle": ""
+  },
+  {
+   "title": "25 Jahre – Festwoche",
+   "details": "Softcover, 17 x 24 cm, 104 Seiten, hrsg. von Johann Trippolt",
+   "year": 2024,
+   "price": "EUR 12,00",
+   "isbn": "",
+   "image": "/images/publications/25-jahre-festwoche-2024.jpg",
+   "id": "25-jahre-festwoche",
+   "subtitle": "Dokumentation"
+  },
+  {
+   "title": "Peter Adrian Larcher (1955–2024)",
+   "details": "Softcover, 17 x 24 cm, 91 Seiten mit Beiträgen von Andreas Rudigier, Edith Schlocker, hrsg. Johann Trippolt",
+   "year": 2025,
+   "price": "EUR 18,00",
+   "isbn": "978-3-200-10830-1",
+   "image": "/images/publications/larcher-2025.jpg",
+   "id": "peter-adrian-larcher-19552024",
+   "subtitle": "Peter Adrian Larcher"
+  },
+  {
+   "title": "SCHLATTER",
+   "details": "Softcover, 17 x 24 cm, 70 Seiten mit Beiträgen von Johann Trippolt und Bruno Winkler, hrsg. Johann Trippolt",
+   "year": 2026,
+   "price": "EUR 16,00",
+   "isbn": "",
+   "image": "/images/publications/schlatter-katalog-2026.jpg",
+   "id": "schlatter",
+   "subtitle": "Manfred Schlatter"
+  },
+  {
+   "title": "Manfred Schlatter, Photographien 2000–2025",
+   "details": "Hardcover, 25 x 29 cm, 130 Seiten mit Beitrag von Karlheinz Pichler, hrsg. Johann Trippolt",
+   "year": 2026,
+   "price": "EUR 32,00",
+   "isbn": "978-3-200-11120-2",
+   "image": "/images/publications/schlatter-photographien-2026.jpg",
+   "id": "manfred-schlatter-photographien-20002025",
+   "subtitle": "Manfred Schlatter"
+  }
+ ],
+ "team": [
+  {
+   "name": "Dr. Johann Trippolt",
+   "role": "Obmann",
+   "image": "/images/team/johann-trippolt.jpg",
+   "id": "team-1"
+  },
+  {
+   "name": "Manfred Schlatter",
+   "role": "Kassier",
+   "image": "/images/team/manfred-schlatter.jpg",
+   "id": "team-2"
+  },
+  {
+   "name": "Bruno Winkler",
+   "role": "Schriftführer / Kunstbeirat",
+   "image": "/images/team/bruno-winkler.jpg",
+   "id": "team-3"
+  },
+  {
+   "name": "Daniela Vogt-Marent",
+   "role": "Obmann-Stellvertreterin",
+   "image": "/images/team/daniela-vogt-marent.jpg",
+   "id": "team-4"
+  }
+ ],
+ "sponsors": [
+  {
+   "name": "Logo-auf-Weiss-RGB",
+   "image": "/images/sponsors/logo-1.jpg",
+   "id": "sponsor-1"
+  },
+  {
+   "name": "",
+   "image": "/images/sponsors/logo-2.jpg",
+   "id": "sponsor-2"
+  },
+  {
+   "name": "",
+   "image": "/images/sponsors/logo-3.jpg",
+   "id": "sponsor-3"
+  },
+  {
+   "name": "",
+   "image": "/images/sponsors/logo-4.jpg",
+   "id": "sponsor-4"
+  },
+  {
+   "name": "Montafon",
+   "image": "/images/sponsors/logo-5.jpg",
+   "id": "sponsor-5"
+  }
+ ]
+}

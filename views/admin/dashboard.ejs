@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="admin-head">
+        <h1>Admin-Bereich</h1>
+        <p class="lead">Hier können Sie alle Inhalte der Website bearbeiten. Änderungen sind sofort online.</p>
+      </div>
+      <div class="admin-grid">
+        <a href="/admin/texte" class="admin-tile">
+          <h3>Texte &amp; Fotos</h3>
+          <p>Startseite, Über uns, Öffnungszeiten, Kontaktdaten, Zitat, Hero-Bild &amp; Logo</p>
+        </a>
+        <a href="/admin/ausstellungen" class="admin-tile">
+          <h3>Ausstellungen</h3>
+          <p><%= counts.exhibitions %> Einträge – anlegen, bearbeiten, Fotos hochladen</p>
+        </a>
+        <a href="/admin/publikationen" class="admin-tile">
+          <h3>Publikationen</h3>
+          <p><%= counts.publications %> Einträge – Bücher &amp; Kataloge verwalten</p>
+        </a>
+        <a href="/admin/team" class="admin-tile">
+          <h3>Team &amp; Sponsoren</h3>
+          <p><%= counts.team %> Teammitglieder, <%= counts.sponsors %> Sponsoren</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

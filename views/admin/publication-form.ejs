@@ -1,0 +1,33 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container narrow">
+      <p class="breadcrumb"><a href="/admin/publikationen">← Alle Publikationen</a></p>
+      <h1><%= isNew ? 'Neue Publikation' : 'Publikation bearbeiten' %></h1>
+      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert.</p><% } %>
+
+      <form method="post" action="<%= isNew ? '/admin/publikationen/neu' : '/admin/publikationen/' + pub.id %>" enctype="multipart/form-data" class="admin-form">
+        <label>Titel<input type="text" name="title" value="<%= pub.title %>" required></label>
+        <label>Künstler:in / Untertitel<input type="text" name="subtitle" value="<%= pub.subtitle %>"></label>
+        <label>Details (Format, Seiten, Herausgeber …)<textarea name="details" rows="3"><%= pub.details %></textarea></label>
+        <div class="form-row">
+          <label>Jahr<input type="text" name="year" value="<%= pub.year %>"></label>
+          <label>Preis<input type="text" name="price" value="<%= pub.price %>" placeholder="EUR 15,00"></label>
+        </div>
+        <label>ISBN<input type="text" name="isbn" value="<%= pub.isbn %>"></label>
+        <label>Cover-Bild <%= pub.image ? 'ersetzen' : 'hochladen' %><input type="file" name="image" accept="image/*"></label>
+        <% if (pub.image) { %><div class="admin-thumb small"><img src="<%= pub.image %>" alt="Cover"></div><% } %>
+        <button type="submit" class="btn btn-dark"><%= isNew ? 'Anlegen' : 'Speichern' %></button>
+      </form>
+
+      <% if (!isNew) { %>
+      <form method="post" action="/admin/publikationen/<%= pub.id %>/loeschen" class="mt danger-zone"
+            onsubmit="return confirm('Diese Publikation wirklich löschen?')">
+        <button type="submit" class="btn btn-danger">Publikation löschen</button>
+      </form>
+      <% } %>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

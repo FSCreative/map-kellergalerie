@@ -1,0 +1,36 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <section class="page-hero" style="background-image:url('<%= site.aboutHeaderImage %>')">
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <h1 class="reveal">Über uns</h1>
+      <p class="page-hero-credit"><%= site.aboutHeaderCredit %></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <p class="lead reveal"><%= site.aboutText %></p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="section-kicker"><%= site.teamMotto %></p>
+        <h2>Unser Team</h2>
+      </div>
+      <div class="team-grid">
+        <% team.forEach((t, i) => { %>
+        <div class="team-card reveal" style="transition-delay: <%= i * 80 %>ms">
+          <div class="team-photo"><img src="<%= t.image %>" alt="<%= t.name %>" loading="lazy"></div>
+          <h3><%= t.name %></h3>
+          <p><%= t.role %></p>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

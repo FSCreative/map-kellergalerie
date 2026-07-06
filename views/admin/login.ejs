@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container narrow center">
+      <div class="admin-login-box">
+        <h1>Admin-Bereich</h1>
+        <p class="lead">Bitte melden Sie sich an, um Texte und Fotos zu bearbeiten.</p>
+        <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+        <form method="post" action="/admin/login" class="admin-form">
+          <label>Passwort<input type="password" name="password" required autofocus></label>
+          <button type="submit" class="btn btn-dark">Anmelden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,58 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+  <section class="section">
+    <div class="container narrow">
+      <p class="breadcrumb"><a href="/admin">← Admin-Übersicht</a></p>
+      <h1>Texte &amp; Fotos</h1>
+      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert – Änderungen sind online.</p><% } %>
+      <form method="post" action="/admin/texte" enctype="multipart/form-data" class="admin-form">
+
+        <h2>Startseite</h2>
+        <label>Titel (Hero)<input type="text" name="heroTitle" value="<%= site.heroTitle %>"></label>
+        <label>Untertitel (Hero)<textarea name="heroSubtitle" rows="2"><%= site.heroSubtitle %></textarea></label>
+        <div class="form-row">
+          <label>Hero-Bild ersetzen<input type="file" name="heroImageFile" accept="image/*"></label>
+          <label>Bildnachweis Hero<input type="text" name="heroCredit" value="<%= site.heroCredit %>"></label>
+        </div>
+        <div class="admin-thumb"><img src="<%= site.heroImage %>" alt="Aktuelles Hero-Bild"></div>
+        <label>Logo ersetzen<input type="file" name="logoFile" accept="image/*"></label>
+        <div class="admin-thumb small"><img src="<%= site.logo %>" alt="Aktuelles Logo"></div>
+
+        <h2>Zitat</h2>
+        <label>Zitat<textarea name="quote" rows="2"><%= site.quote %></textarea></label>
+        <label>Zitat-Autor<input type="text" name="quoteAuthor" value="<%= site.quoteAuthor %>"></label>
+
+        <h2>Über uns</h2>
+        <label>Text „Über uns“<textarea name="aboutText" rows="8"><%= site.aboutText %></textarea></label>
+        <div class="form-row">
+          <label>Kopfbild „Über uns“ ersetzen<input type="file" name="aboutHeaderImageFile" accept="image/*"></label>
+          <label>Bildnachweis<input type="text" name="aboutHeaderCredit" value="<%= site.aboutHeaderCredit %>"></label>
+        </div>
+        <div class="admin-thumb"><img src="<%= site.aboutHeaderImage %>" alt="Kopfbild Über uns"></div>
+        <label>Team-Motto<input type="text" name="teamMotto" value="<%= site.teamMotto %>"></label>
+
+        <h2>Öffnungszeiten &amp; Kontakt</h2>
+        <label>Öffnungszeiten<textarea name="openingHours" rows="2"><%= site.openingHours %></textarea></label>
+        <label>Adresse<input type="text" name="address" value="<%= site.address %>"></label>
+        <div class="form-row">
+          <label>E-Mail<input type="email" name="email" value="<%= site.email %>"></label>
+          <label>Telefon<input type="text" name="phone" value="<%= site.phone %>"></label>
+        </div>
+        <div class="form-row">
+          <label>Facebook-URL<input type="url" name="facebook" value="<%= site.facebook %>"></label>
+          <label>Sommerbar-URL<input type="url" name="sommerbar" value="<%= site.sommerbar %>"></label>
+        </div>
+        <label>ZVR-Zahl<input type="text" name="zvr" value="<%= site.zvr %>"></label>
+
+        <h2>Einleitungstexte</h2>
+        <label>Intro Publikationen<textarea name="publicationsIntro" rows="2"><%= site.publicationsIntro %></textarea></label>
+        <label>Intro Sponsoren<textarea name="sponsorsIntro" rows="2"><%= site.sponsorsIntro %></textarea></label>
+        <label>Meta-Beschreibung (Google)<textarea name="metaDescription" rows="2"><%= site.metaDescription %></textarea></label>
+
+        <button type="submit" class="btn btn-dark">Speichern</button>
+      </form>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

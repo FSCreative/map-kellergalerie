@@ -1,0 +1,74 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <section class="hero">
+    <div class="hero-media">
+      <img src="<%= site.heroImage %>" alt="Blick in die MAP Kellergalerie" class="hero-img">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="hero-kicker">Galerie · Schruns im Montafon</p>
+      <h1 class="hero-title"><%= site.heroTitle %></h1>
+      <p class="hero-sub"><%= site.heroSubtitle %></p>
+      <div class="hero-actions">
+        <a href="/ausstellungen" class="btn btn-light">Ausstellungen entdecken</a>
+        <a href="/kontakt" class="btn btn-ghost">Besuch planen</a>
+      </div>
+    </div>
+    <span class="hero-credit"><%= site.heroCredit %></span>
+    <a href="#aktuell" class="hero-scroll" aria-label="Nach unten scrollen">▾</a>
+  </section>
+
+  <section class="section" id="aktuell">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Letzte Ausstellungen <span class="amp">&amp;</span> Veranstaltungen</h2>
+        <a href="/ausstellungen" class="text-link">Alle Ausstellungen →</a>
+      </div>
+      <div class="card-grid">
+        <% exhibitions.forEach((ex, i) => { %>
+        <a href="/ausstellungen/<%= ex.slug %>" class="card reveal" style="transition-delay: <%= i * 80 %>ms">
+          <div class="card-media">
+            <% if (ex.images.length) { %><img src="<%= ex.images[0] %>" alt="<%= ex.title %>" loading="lazy"><% } %>
+            <span class="card-cat"><%= ex.category %></span>
+          </div>
+          <div class="card-body">
+            <h3><%= ex.title %></h3>
+            <% if (ex.subtitle) { %><p class="card-sub"><%= ex.subtitle %></p><% } %>
+            <p class="card-date"><%= formatDate(ex.date) %></p>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container reveal">
+      <blockquote>
+        <p>„<%= site.quote %>“</p>
+        <cite>— <%= site.quoteAuthor %></cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div class="container split">
+      <div class="split-text reveal">
+        <p class="section-kicker">Besuchen Sie uns</p>
+        <h2>Öffnungszeiten</h2>
+        <p class="lead"><%= site.openingHours %></p>
+        <p><%= site.address %></p>
+        <div class="hero-actions">
+          <a href="https://maps.google.com/?q=<%= encodeURIComponent(site.address) %>" target="_blank" rel="noopener" class="btn btn-dark">Route planen ↗</a>
+          <a href="/kontakt" class="btn btn-outline">Kontakt</a>
+        </div>
+      </div>
+      <div class="split-media reveal">
+        <img src="<%= site.aboutHeaderImage %>" alt="Ausstellungsansicht" loading="lazy">
+        <span class="media-credit"><%= site.aboutHeaderCredit %></span>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>

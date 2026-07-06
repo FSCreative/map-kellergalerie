@@ -1,0 +1,33 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1 class="reveal">Publikationen</h1>
+      <p class="lead reveal"><%= site.publicationsIntro %></p>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="pub-grid">
+        <% publications.forEach((pub, i) => { %>
+        <div class="pub-card reveal">
+          <div class="pub-cover">
+            <% if (pub.image) { %><img src="<%= pub.image %>" alt="<%= pub.title %>" loading="lazy" data-lightbox="<%= i %>"><% } %>
+          </div>
+          <div class="pub-info">
+            <h3><%= pub.title %></h3>
+            <% if (pub.subtitle) { %><p class="pub-artist"><%= pub.subtitle %></p><% } %>
+            <p class="pub-details"><%= pub.details %><%= pub.year ? ', ' + pub.year : '' %></p>
+            <% if (pub.isbn) { %><p class="pub-isbn">ISBN <%= pub.isbn %></p><% } %>
+            <% if (pub.price) { %><p class="pub-price"><%= pub.price %></p><% } %>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <p class="note reveal">Bücher und Kataloge können auf Anfrage unter <a href="mailto:<%= site.email %>"><%= site.email %></a> erworben werden.</p>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
