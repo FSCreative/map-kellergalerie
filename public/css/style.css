@@ -390,3 +390,27 @@ input[type="file"] { padding: 9px; background: #fff; }
 
 /* Fix: hidden-Attribut respektieren (Lightbox) */
 .lightbox[hidden] { display: none; }
+
+/* ---------- Mobile-Feinschliff ---------- */
+@media (max-width: 720px) {
+    /* Fix: Menue-Drawer volle Hoehe (backdrop-filter des Headers ist Bezugsrahmen fuer position:fixed) */
+  .main-nav { top: 0; bottom: auto; height: 100vh; height: 100dvh; }
+    /* Kategorie-Filter als wischbare Zeile */
+  .filter-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .chip { flex: 0 0 auto; white-space: nowrap; }
+    /* Kein Auto-Zoom beim Antippen von Formularfeldern (iOS) */
+  input, textarea, select { font-size: 16px; }
+    /* Bequemere Touch-Ziele in der Lightbox */
+  .lightbox button { min-width: 48px; min-height: 48px; }
+    .lb-prev, .lb-next { padding: 24px 12px; }
+    .admin-inline-actions { width: 100%; justify-content: flex-end; }
+}
+@media (max-width: 480px) {
+    .container { padding: 0 18px; }
+    .hero-actions .btn { width: 100%; text-align: center; }
+    .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .team-photo { width: 132px; height: 132px; }
+    .quote-band::before { font-size: 12rem; }
+    .hero-title { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+}
