@@ -84,3 +84,37 @@ registerAdmin(app);
 http.createServer((req, res) => app.handle(req, res)).listen(PORT, () => {
   console.log(`MAP Kellergalerie läuft auf Port ${PORT}`);
 });
+
+// ---------- SEO: Basis-URL, sitemap.xml & robots.txt ----------
+const BASE_URL = (process.env.BASE_URL || 'https://map-kellergalerie-production.up.railway.app').replace(/\/+$/, '');
+const prevLocals = app.locals;
+app.locals = req => Object.assign(prevLocals(req), { baseUrl: BASE_URL });
+
+app.get('/sitemap.xml', (req, res) => {
+    const c = store.get();
+    const today = new Date().toISOString().slice(0, 10);
+    const urls = [
+      { loc: '/', prio: '1.0', lastmod: today, freq: 'weekly' },
+      { loc: '/ausstellungen', prio: '0.9', lastmod: today, freq: 'weekly' },
+      { loc: '/ueber-uns', prio: '0.7', lastmod: today, freq: 'monthly' },
+      { loc: '/publikationen', prio: '0.7', lastmod: today, freq: 'monthly' },
+      { loc: '/sponsoren', prio: '0.5', lastmod: today, freq: 'yearly' },
+      { loc: '/kontakt', prio: '0.7', lastmod: today, freq: 'monthly' }
+        ].concat(c.exhibitions.map(e => ({
+              loc: '/ausstellungen/' + encodeURIComponent(e.slug),
+              prio: '0.8',
+              lastmod: String(e.date || today).slice(0, 10),
+              freq: 'monthly'
+        })));
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+          urls.map(u => '  <url><loc>' + BASE_URL + u.loc + '</loc><lastmod>' + u.lastmod + '</lastmod><changefreq>' + u.freq + '</changefreq><priority>' + u.prio + '</priority></url>').join('\n') +
+          '\n</urlset>\n';
+    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+    res.end(xml);
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.end('User-agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: ' + BASE_URL + '/sitemap.xml\n');
+});
