@@ -35,12 +35,14 @@
       </form>
 
       <h2 class="mt">Sponsoren</h2>
+      <p class="note">Mit Website-URL wird das Logo für Besucher klickbar (Link öffnet in neuem Tab).</p>
       <div class="admin-list">
         <% sponsors.forEach(s => { %>
         <form method="post" action="/admin/sponsoren/<%= s.id %>" enctype="multipart/form-data" class="admin-list-item admin-inline-form">
           <div class="admin-list-thumb contain"><% if (s.image) { %><img src="<%= s.image %>" alt=""><% } %></div>
           <div class="admin-list-info">
             <input type="text" name="name" value="<%= s.name %>" placeholder="Name (optional)">
+            <input type="url" name="url" value="<%= s.url || '' %>" placeholder="Website-URL (https://…)">
             <input type="file" name="image" accept="image/*">
           </div>
           <div class="admin-inline-actions">
@@ -54,8 +56,9 @@
       <form method="post" action="/admin/sponsoren/neu" enctype="multipart/form-data" class="admin-form admin-add-form">
         <div class="form-row">
           <label>Name (optional)<input type="text" name="name"></label>
-          <label>Logo<input type="file" name="image" accept="image/*" required></label>
+          <label>Website-URL (optional)<input type="url" name="url" placeholder="https://…"></label>
         </div>
+        <label>Logo<input type="file" name="image" accept="image/*" required></label>
         <button type="submit" class="btn btn-dark">Hinzufügen</button>
       </form>
     </div>

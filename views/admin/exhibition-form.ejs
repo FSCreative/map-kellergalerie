@@ -3,45 +3,82 @@
 <main>
   <section class="section">
     <div class="container narrow">
-      <p class="breadcrumb"><a href="/admin/ausstellungen">← Alle Ausstellungen</a></p>
-      <h1><%= isNew ? 'Neue Ausstellung' : 'Ausstellung bearbeiten' %></h1>
-      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert – Änderungen sind online.</p><% } %>
+      <p class="breadcrumb"><a href="/admin/ausstellungen">← Alle Ausstellungen &amp; Termine</a></p>
+      <h1><%= isNew ? 'Neuer Eintrag' : 'Eintrag bearbeiten' %></h1>
+      <% if (typeof saved !== 'undefined' && saved) { %><p class="form-success">✓ Gespeichert – die Änderungen sind sofort online.</p><% } %>
+
+      <% if (isNew) { %>
+      <div class="help-box">
+        <strong>Neuen Termin anlegen:</strong> Zuerst die Grunddaten ausfüllen und auf „Anlegen“ klicken –
+        danach kannst du Fotos hochladen und sortieren. Alles ist sofort auf der Website sichtbar.
+      </div>
+      <% } %>
 
       <form method="post" action="<%= isNew ? '/admin/ausstellungen/neu' : '/admin/ausstellungen/' + ex.slug %>" enctype="multipart/form-data" class="admin-form">
-        <label>Titel<input type="text" name="title" value="<%= ex.title %>" required></label>
-        <label>Untertitel<input type="text" name="subtitle" value="<%= ex.subtitle %>"></label>
+        <h2>Grunddaten</h2>
+        <label>Titel *
+          <input type="text" name="title" value="<%= ex.title %>" required placeholder="z.B. Eva Hörschläger">
+          <small class="field-hint">Erscheint als Überschrift auf der Detailseite, auf der Übersichtskarte und ggf. auf der Startseite. Meist der Name der Künstlerin / des Künstlers.</small>
+        </label>
+        <label>Untertitel
+          <input type="text" name="subtitle" value="<%= ex.subtitle %>" placeholder="z.B. Druckgraphiken 2020 – 2026">
+          <small class="field-hint">Kurze Ergänzung unter dem Titel – z.B. Ausstellungstitel, Zeitraum oder Technik. Kann leer bleiben.</small>
+        </label>
         <div class="form-row">
-          <label>Datum<input type="date" name="date" value="<%= ex.date %>" required></label>
-          <label>Kategorie<input type="text" name="category" value="<%= ex.category %>" list="catlist" placeholder="z.B. Malerei und Zeichnungen">
+          <label>Datum *
+            <input type="date" name="date" value="<%= ex.date %>" required>
+            <small class="field-hint">Meist der Eröffnungstag. Bestimmt die Sortierung – die 4 neuesten Einträge erscheinen auf der Startseite. Zukünftige Termine gelten als „Kommend“.</small>
+          </label>
+          <label>Kategorie
+            <input type="text" name="category" value="<%= ex.category %>" list="catlist" placeholder="z.B. Malerei und Zeichnungen">
             <datalist id="catlist">
               <option>Malerei und Zeichnungen</option><option>Fotografie</option><option>Druckgraphiken</option>
               <option>Skulpturen</option><option>Keramik</option><option>Textilien</option><option>Installationen</option>
               <option>Lesungen</option><option>Musik, Konzert</option><option>Film</option><option>Allgemein</option>
             </datalist>
+            <small class="field-hint">Wird als Filter auf der Ausstellungsseite angeboten und als Etikett auf dem Titelbild angezeigt. Mehrere Kategorien mit Komma trennen.</small>
           </label>
         </div>
-        <label>Autor / erstellt von<input type="text" name="author" value="<%= ex.author %>"></label>
-        <label>Text (Absätze durch Leerzeile trennen)<textarea name="text" rows="10"><%= ex.body.join('\n\n') %></textarea></label>
-        <label>Neue Fotos hochladen (Mehrfachauswahl möglich)<input type="file" name="images" accept="image/*" multiple></label>
+        <label>Autor / erstellt von
+          <input type="text" name="author" value="<%= ex.author %>">
+          <small class="field-hint">Nur intern – wird Besuchern nicht angezeigt. Kann leer bleiben.</small>
+        </label>
+
+        <h2>Beschreibungstext</h2>
+        <label>Text zur Ausstellung
+          <textarea name="text" rows="10" placeholder="Beschreibung, Vernissage-Termin, Öffnungszeiten der Ausstellung, Infos zur Künstlerin / zum Künstler …"><%= ex.body.join('\n\n') %></textarea>
+          <small class="field-hint">Erscheint auf der Detailseite über den Fotos. Absätze durch eine Leerzeile trennen. Kann leer bleiben – dann werden nur die Fotos gezeigt.</small>
+        </label>
+
+        <h2>Fotos</h2>
+        <label>Neue Fotos hochladen
+          <input type="file" name="images" accept="image/*" multiple>
+          <small class="field-hint">Mehrfachauswahl möglich (bis 12 auf einmal, je max. 15 MB). Neue Fotos werden hinten angefügt.</small>
+        </label>
         <button type="submit" class="btn btn-dark"><%= isNew ? 'Anlegen' : 'Speichern' %></button>
         <% if (!isNew) { %><a href="/ausstellungen/<%= ex.slug %>" class="btn btn-outline" target="_blank">Seite ansehen ↗</a><% } %>
       </form>
 
       <% if (!isNew && ex.images.length) { %>
-      <h2 class="mt">Fotos (<%= ex.images.length %>)</h2>
-      <p class="note">Das erste Bild ist das Titelbild.</p>
+      <h2 class="mt">Hochgeladene Fotos (<%= ex.images.length %>)</h2>
+      <div class="photo-legend">
+        <span><b>★</b> als Titelbild verwenden</span>
+        <span><b>↑</b> in der Reihenfolge nach vorne</span>
+        <span><b>✕</b> Foto löschen</span>
+      </div>
       <div class="admin-img-grid">
-        <% ex.images.forEach((img, i) => { %>
+        <% ex.images.forEach(function (img, i) { %>
         <div class="admin-img-cell">
-          <img src="<%= img %>" alt="Bild <%= i + 1 %>">
+          <img src="<%= img %>" alt="Foto <%= i + 1 %>">
+          <% if (i === 0) { %><span class="cover-badge">Titelbild</span><% } %>
           <div class="admin-img-actions">
             <form method="post" action="/admin/ausstellungen/<%= ex.slug %>/bild">
               <input type="hidden" name="index" value="<%= i %>">
               <% if (i > 0) { %>
-                <button name="action" value="cover" title="Als Titelbild">★</button>
-                <button name="action" value="up" title="Nach vorne">↑</button>
+                <button name="action" value="cover" title="Als Titelbild verwenden">★</button>
+                <button name="action" value="up" title="Nach vorne schieben">↑</button>
               <% } %>
-              <button name="action" value="delete" title="Löschen" onclick="return confirm('Bild wirklich löschen?')">✕</button>
+              <button name="action" value="delete" title="Foto löschen" onclick="return confirm('Dieses Foto wirklich löschen?')">✕</button>
             </form>
           </div>
         </div>
@@ -50,10 +87,13 @@
       <% } %>
 
       <% if (!isNew) { %>
-      <form method="post" action="/admin/ausstellungen/<%= ex.slug %>/loeschen" class="mt danger-zone"
-            onsubmit="return confirm('Diese Ausstellung samt allen Bildern wirklich löschen?')">
-        <button type="submit" class="btn btn-danger">Ausstellung löschen</button>
-      </form>
+      <div class="danger-zone mt">
+        <small class="field-hint">Löscht den Eintrag samt aller hochgeladenen Fotos endgültig von der Website.</small>
+        <form method="post" action="/admin/ausstellungen/<%= ex.slug %>/loeschen"
+              onsubmit="return confirm('Diesen Eintrag samt allen Fotos wirklich endgültig löschen?')">
+          <button type="submit" class="btn btn-danger">Eintrag löschen</button>
+        </form>
+      </div>
       <% } %>
     </div>
   </section>

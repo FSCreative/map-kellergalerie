@@ -13,9 +13,15 @@
       <p class="section-kicker center reveal">Danke für die Unterstützung</p>
       <div class="sponsor-grid">
         <% sponsors.forEach((s, i) => { %>
+        <% if (s.url) { %>
+        <a href="<%= s.url %>" target="_blank" rel="noopener" class="sponsor-card reveal" style="transition-delay: <%= i * 60 %>ms" title="<%= s.name || 'Zur Website des Sponsors' %>">
+          <img src="<%= s.image %>" alt="<%= s.name || 'Sponsor-Logo' %>" loading="lazy">
+        </a>
+        <% } else { %>
         <div class="sponsor-card reveal" style="transition-delay: <%= i * 60 %>ms">
           <img src="<%= s.image %>" alt="<%= s.name || 'Sponsor-Logo' %>" loading="lazy">
         </div>
+        <% } %>
         <% }) %>
       </div>
     </div>

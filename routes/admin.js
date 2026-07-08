@@ -307,6 +307,7 @@ module.exports = function registerAdmin(app) {
     c.sponsors.push({
       id: store.uniqueSlug('sponsor-' + store.slugify(req.body.name || 'neu'), c.sponsors.map(s => s.id)),
       name: (req.body.name || '').trim(),
+      url: (req.body.url || '').trim(),
       image: up.image ? up.image[0] : ''
     });
     store.save(c);
@@ -323,6 +324,7 @@ module.exports = function registerAdmin(app) {
         c.sponsors = c.sponsors.filter(x => x.id !== req.params.id);
       } else {
         s.name = (req.body.name || '').trim();
+        s.url = (req.body.url || '').trim();
         const up = saveUploads(req);
         if (up.image) { deleteUpload(s.image); s.image = up.image[0]; }
       }

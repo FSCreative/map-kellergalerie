@@ -5,22 +5,65 @@
     <div class="container">
       <p class="breadcrumb"><a href="/admin">← Admin-Übersicht</a></p>
       <div class="admin-head-row">
-        <h1>Ausstellungen</h1>
-        <a href="/admin/ausstellungen/neu" class="btn btn-dark">+ Neue Ausstellung</a>
+        <h1>Ausstellungen &amp; Termine</h1>
+        <a href="/admin/ausstellungen/neu" class="btn btn-dark">+ Neuer Eintrag</a>
       </div>
+
+      <div class="help-box">
+        <strong>So funktioniert die Terminverwaltung:</strong><br>
+        Jeder Eintrag ist eine Ausstellung, Lesung, ein Konzert oder eine sonstige Veranstaltung.
+        Das <em>Datum</em> bestimmt die Reihenfolge (neueste zuerst). Einträge mit Datum in der Zukunft sind mit
+        <span class="badge badge-upcoming">Kommend</span> markiert.
+        Die <em>4 neuesten Einträge</em> erscheinen automatisch auf der Startseite unter „Letzte Ausstellungen &amp; Veranstaltungen“.
+        Das <em>erste Foto</em> eines Eintrags ist überall das Titelbild.
+      </div>
+
+      <input type="search" id="adminSearch" class="admin-search" placeholder="🔍 Suchen nach Titel, Untertitel oder Kategorie …">
+
+      <%
+      var byYear = {};
+      exhibitions.forEach(function (ex) {
+        var y = String(ex.date || '').slice(0, 4) || 'Ohne Datum';
+        (byYear[y] = byYear[y] || []).push(ex);
+      });
+      var years = Object.keys(byYear).sort().reverse();
+      var today = new Date().toISOString().slice(0, 10);
+      %>
+      <% years.forEach(function (y) { %>
+      <h2 class="year-heading"><%= y %></h2>
       <div class="admin-list">
-        <% exhibitions.forEach(ex => { %>
-        <a href="/admin/ausstellungen/<%= ex.slug %>" class="admin-list-item">
+        <% byYear[y].forEach(function (ex) { %>
+        <a href="/admin/ausstellungen/<%= ex.slug %>" class="admin-list-item admin-searchable"
+           data-search="<%= (ex.title + ' ' + (ex.subtitle || '') + ' ' + (ex.category || '')).toLowerCase() %>">
           <div class="admin-list-thumb"><% if (ex.images.length) { %><img src="<%= ex.images[0] %>" alt=""><% } %></div>
           <div class="admin-list-info">
-            <strong><%= ex.title %></strong>
-            <span><%= formatDate(ex.date) %> · <%= ex.category %> · <%= ex.images.length %> Bilder</span>
+            <strong><%= ex.title %><% if (String(ex.date) >= today) { %><span class="badge badge-upcoming">Kommend</span><% } %></strong>
+            <span><%= formatDate(ex.date) %> · <%= ex.category %> · <%= ex.images.length %> Foto<%= ex.images.length === 1 ? '' : 's' %><%= ex.subtitle ? ' · ' + ex.subtitle : '' %></span>
           </div>
           <span class="admin-list-edit">Bearbeiten →</span>
         </a>
         <% }) %>
       </div>
+      <% }) %>
     </div>
   </section>
 </main>
+<script>
+(function () {
+  var s = document.getElementById('adminSearch');
+  if (!s) return;
+  s.addEventListener('input', function () {
+    var q = s.value.toLowerCase().trim();
+    document.querySelectorAll('.admin-searchable').forEach(function (el) {
+      el.classList.toggle('search-hidden', !!q && el.dataset.search.indexOf(q) === -1);
+    });
+    document.querySelectorAll('.year-heading').forEach(function (h) {
+      var list = h.nextElementSibling;
+      var any = list && list.querySelector('.admin-searchable:not(.search-hidden)');
+      h.classList.toggle('search-hidden', !any);
+      if (list) list.classList.toggle('search-hidden', !any);
+    });
+  });
+})();
+</script>
 <%- include('../partials/footer') %>
