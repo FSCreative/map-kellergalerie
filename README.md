@@ -38,3 +38,7 @@ npm start
 4. Unter Settings → Networking eine Domain generieren
 
 Ohne Volume funktioniert die Seite ebenfalls, aber Admin-Änderungen gehen bei jedem neuen Deployment verloren.
+
+## Hinweis zur Erstellung
+
+Bei der Erstellung dieser Website wurden teilweise KI-gestützte Werkzeuge eingesetzt. Alle Inhalte wurden redaktionell geprüft.
