@@ -20,6 +20,7 @@
   <div class="footer-bottom">
     <span>© <%= new Date().getFullYear() %> <%= site.siteName %></span>
     <span class="footer-admin">
+      <% if (currentPath.indexOf('/admin') !== 0) { %><a href="#cookie-einstellungen">Cookie-Einstellungen</a> ·<% } %>
       <% if (isAdmin) { %>
         <a href="/admin">Admin-Bereich</a> ·
         <form method="post" action="/admin/logout" class="inline-form"><button type="submit" class="linklike">Abmelden</button></form>
@@ -59,5 +60,6 @@
   <div class="lb-caption"></div>
 </div>
 <script src="/js/main.js?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>"></script>
+<% if (currentPath.indexOf('/admin') !== 0) { %><script src="/js/fs-consent.js?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>" defer></script><% } %>
 </body>
 </html>

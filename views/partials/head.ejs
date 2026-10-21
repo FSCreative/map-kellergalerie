@@ -47,10 +47,19 @@ var absUrl = function (u) { return u && u.indexOf('http') === 0 ? u : baseUrl + 
 <meta name="twitter:title" content="<%= pageTitle %>">
 <meta name="twitter:description" content="<%= pageDesc %>">
 <meta name="twitter:image" content="<%= absUrl(ogImage) %>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>"><script type="application/ld+json">
+<link rel="stylesheet" href="/fonts/fonts.css?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>">
+<link rel="stylesheet" href="/css/style.css?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>">
+<% if (currentPath.indexOf('/admin') !== 0) { %>
+<link rel="stylesheet" href="/css/fs-consent.css?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>">
+<script type="application/json" id="fs-consent-config">
+{
+  "privacyUrl": false,
+  "position": "bottom-left",
+  "categories": {}
+}
+</script>
+<% } %>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ArtGallery",

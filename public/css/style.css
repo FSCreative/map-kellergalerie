@@ -471,3 +471,22 @@ input[type="file"] { padding: 9px; background: #fff; }
 }
 .search-hidden { display: none !important; }
 .danger-zone .field-hint { margin-bottom: 8px; }
+
+/* ---------- Cookie-Banner (FS Consent) im Design der Seite ---------- */
+:root {
+  --fsc-bg: #faf8f4;
+  --fsc-fg: #1e1b16;
+  --fsc-muted: #4a453d;
+  --fsc-accent: #16130e;
+  --fsc-accent-fg: #ffffff;
+  --fsc-border: #e4ddd1;
+  --fsc-radius: 4px;
+  --fsc-btn-radius: 4px;
+  --fsc-font: 'Inter', -apple-system, sans-serif;
+  --fsc-heading-font: 'Cormorant Garamond', Georgia, serif;
+  --fsc-heading-weight: 500;
+  --fsc-btn-transform: uppercase;
+  --fsc-btn-spacing: .12em;
+  --fsc-btn-weight: 400;
+  --fsc-shadow: 0 10px 40px rgba(30, 27, 22, .22);
+}
