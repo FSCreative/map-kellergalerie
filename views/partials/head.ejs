@@ -53,7 +53,8 @@ var absUrl = function (u) { return u && u.indexOf('http') === 0 ? u : baseUrl + 
 <link rel="stylesheet" href="/css/fs-consent.css?v=<%= typeof assetV !== 'undefined' ? assetV : 1 %>">
 <script type="application/json" id="fs-consent-config">
 {
-  "privacyUrl": false,
+  "privacyUrl": "/datenschutz",
+  "imprintUrl": "/impressum",
   "position": "bottom-left",
   "categories": {}
 }
