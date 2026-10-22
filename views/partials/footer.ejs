@@ -20,6 +20,8 @@
   <div class="footer-bottom">
     <span>© <%= new Date().getFullYear() %> <%= site.siteName %></span>
     <span class="footer-admin">
+      <a href="/impressum">Impressum</a> ·
+      <a href="/datenschutz">Datenschutz</a> ·
       <% if (currentPath.indexOf('/admin') !== 0) { %><a href="#cookie-einstellungen">Cookie-Einstellungen</a> ·<% } %>
       <% if (isAdmin) { %>
         <a href="/admin">Admin-Bereich</a> ·

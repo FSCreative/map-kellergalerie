@@ -1,0 +1,72 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<%
+// ENTWURF – Angaben aus den Inhalten der Website (Admin → Texte & Kontakt, Team).
+// Markierte Stellen ([BITTE …]) vor dem Livegang prüfen bzw. ergänzen und die Markierung entfernen.
+var vorsitz = (team || []).filter(function (t) { return /^(obmann|obfrau)$/i.test(String(t.role || '').trim()); })[0];
+%>
+<main>
+  <section class="page-head">
+    <div class="container narrow">
+      <h1 class="reveal">Impressum</h1>
+      <p class="lead reveal">Informationen nach § 5 E-Commerce-Gesetz und Offenlegung nach § 25 Mediengesetz.</p>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container narrow legal">
+      <h2>Medieninhaber, Herausgeber und Diensteanbieter</h2>
+      <dl class="legal-facts">
+        <dt>Verein</dt>
+        <dd>
+          <%= site.orgName %> <mark class="legal-todo">[BITTE PRÜFEN: exakter Vereinsname laut Vereinsregister]</mark><br>
+          Betreiber der <%= site.siteName %>
+        </dd>
+        <dt>Anschrift</dt>
+        <dd><%= site.address %></dd>
+        <dt>Vereinssitz</dt>
+        <dd><mark class="legal-todo">[BITTE PRÜFEN: Sitz laut Vereinsregister (Schruns?)]</mark></dd>
+        <dt>ZVR-Zahl</dt>
+        <dd><%= site.zvr %></dd>
+        <dt>Vereinsbehörde</dt>
+        <dd><mark class="legal-todo">[BITTE PRÜFEN: zuständige Vereinsbehörde (Bezirkshauptmannschaft Bludenz?)]</mark></dd>
+        <dt>Vertreten durch</dt>
+        <dd>
+          <% if (vorsitz) { %><%= vorsitz.name %>, <%= vorsitz.role %><% } %>
+          <mark class="legal-todo">[BITTE PRÜFEN: vertretungsbefugte Organe laut Statuten bzw. Vereinsregisterauszug]</mark>
+        </dd>
+        <dt>E-Mail</dt>
+        <dd><a href="mailto:<%= site.email %>"><%= site.email %></a></dd>
+        <dt>Telefon</dt>
+        <dd><a href="tel:<%= String(site.phone || '').replace(/\s/g, '') %>"><%= site.phone %></a></dd>
+        <dt>UID-Nummer</dt>
+        <dd><mark class="legal-todo">[BITTE PRÜFEN: UID-Nummer, falls vorhanden – sonst Zeile entfernen]</mark></dd>
+      </dl>
+
+      <h2>Vereinszweck und grundlegende Richtung</h2>
+      <p>
+        Der Verein betreibt die <%= site.siteName %> in Schruns und vermittelt Kunst und Kultur: Ausstellungen
+        nationaler und internationaler Künstlerinnen und Künstler, ergänzt durch Konzerte, Lesungen und
+        Filmvorführungen. <mark class="legal-todo">[BITTE PRÜFEN: Vereinszweck laut Statuten]</mark>
+      </p>
+      <p>
+        Diese Website informiert über Ausstellungen und Veranstaltungen, Publikationen, Sponsoren und den Verein.
+      </p>
+
+      <h2>Bildnachweis und Urheberrecht</h2>
+      <ul>
+        <% if (site.heroCredit) { %><li>Titelbild Startseite: <%= site.heroCredit %></li><% } %>
+        <% if (site.aboutHeaderCredit) { %><li>Kopfbild „Über uns“: <%= site.aboutHeaderCredit %></li><% } %>
+        <li><mark class="legal-todo">[BITTE ERGÄNZEN: Urheber:innen bzw. Rechteinhaber der Ausstellungs-, Werk-, Publikations- und Teamfotos]</mark></li>
+      </ul>
+      <p>
+        Die abgebildeten Kunstwerke sind urheberrechtlich geschützt. Die Rechte liegen bei den jeweiligen
+        Künstlerinnen und Künstlern bzw. Fotografinnen und Fotografen.
+      </p>
+
+      <h2>Datenschutz</h2>
+      <p>Informationen zum Umgang mit Ihren Daten finden Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
