@@ -311,6 +311,26 @@ input[type="file"] { padding: 9px; background: #fff; }
 .linklike { background: none; border: 0; color: rgba(255,255,255,.45); cursor: pointer; font-size: .78rem; padding: 0; font-family: var(--sans); }
 .linklike:hover { color: var(--accent-soft); }
 
+/* ---------- Rechtstexte (Impressum, Datenschutz) ---------- */
+.legal { overflow-wrap: break-word; }
+.legal h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin: 2.6rem 0 .8rem; }
+.legal h2:first-child { margin-top: 0; }
+.legal h3 { font-family: var(--sans); font-size: 1rem; font-weight: 500; margin: 1.6rem 0 .5rem; }
+.legal p, .legal li { color: var(--ink-soft); line-height: 1.8; }
+.legal p { margin-bottom: 1rem; }
+.legal ul { margin: 0 0 1rem 1.2rem; }
+.legal li { margin-bottom: .4rem; }
+.legal strong { font-weight: 500; color: var(--ink); }
+.legal p a, .legal li a, .legal dd a { border-bottom: 1px solid var(--accent-soft); }
+.legal-facts { display: grid; grid-template-columns: minmax(150px, 30%) 1fr; gap: 8px 20px; margin-bottom: 1rem; line-height: 1.7; }
+.legal-facts dt { font-weight: 500; color: var(--ink); }
+.legal-facts dd { color: var(--ink-soft); }
+.legal-todo { background: #fbe9cf; color: #6b4210; padding: 0 4px; border-radius: 2px; font-weight: 500; font-size: .92em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+@media (max-width: 560px) {
+  .legal-facts { grid-template-columns: 1fr; gap: 2px; }
+  .legal-facts dd { margin-bottom: 10px; }
+}
+
 /* ---------- Admin ---------- */
 .admin-login-box { max-width: 420px; margin: 40px auto; background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .admin-login-box .admin-form { margin-top: 1.4rem; text-align: left; }

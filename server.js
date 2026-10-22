@@ -76,6 +76,14 @@ app.get('/kontakt', (req, res) => {
   res.render('contact', { title: 'Kontakt' });
 });
 
+app.get('/impressum', (req, res) => {
+  res.render('impressum', { title: 'Impressum', team: store.get().team });
+});
+
+app.get('/datenschutz', (req, res) => {
+  res.render('datenschutz', { title: 'Datenschutzerklärung' });
+});
+
 app.get('/health', (req, res) => res.json({ ok: true }));
 
 // ---------- Admin ----------
@@ -99,7 +107,9 @@ app.get('/sitemap.xml', (req, res) => {
       { loc: '/ueber-uns', prio: '0.7', lastmod: today, freq: 'monthly' },
       { loc: '/publikationen', prio: '0.7', lastmod: today, freq: 'monthly' },
       { loc: '/sponsoren', prio: '0.5', lastmod: today, freq: 'yearly' },
-      { loc: '/kontakt', prio: '0.7', lastmod: today, freq: 'monthly' }
+      { loc: '/kontakt', prio: '0.7', lastmod: today, freq: 'monthly' },
+      { loc: '/impressum', prio: '0.3', lastmod: today, freq: 'yearly' },
+      { loc: '/datenschutz', prio: '0.3', lastmod: today, freq: 'yearly' }
         ].concat(c.exhibitions.map(e => ({
               loc: '/ausstellungen/' + encodeURIComponent(e.slug),
               prio: '0.8',
