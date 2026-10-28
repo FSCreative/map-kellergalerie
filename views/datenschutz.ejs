@@ -1,10 +1,10 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 <%
-// ENTWURF – beschreibt die Datenverarbeitungen, die im Code dieser Website tatsächlich vorkommen
+// Beschreibt die Datenverarbeitungen, die im Code dieser Website tatsächlich vorkommen
 // (Hosting auf Railway, Cloudflare, FS Consent, Admin-Sitzungs-Cookie, lokal geladene Schriften,
 // Kontakt per E-Mail/Telefon bzw. mailto-Formular, Links zu Google Maps/Facebook u. a.).
-// Markierte Stellen ([BITTE …]) vor dem Livegang prüfen bzw. ergänzen und die Markierung entfernen.
+// Bei neuen Diensten oder eingebetteten Inhalten (YouTube, Karten …) bitte hier ergänzen.
 %>
 <main>
   <section class="page-head">
@@ -18,9 +18,8 @@
     <div class="container narrow legal">
       <h2>1. Verantwortlicher</h2>
       <p>
-        Verantwortlich für die Datenverarbeitung auf dieser Website ist der Verein <%= site.orgName %>
-        <mark class="legal-todo">[BITTE PRÜFEN: exakter Vereinsname]</mark>, <%= site.address %>,
-        ZVR-Zahl <%= site.zvr %>.
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist der Verein <%= site.orgName %>,
+        <%= site.address %>, ZVR-Zahl <%= site.zvr %>.
       </p>
       <p>
         Sie erreichen uns per E-Mail an <a href="mailto:<%= site.email %>"><%= site.email %></a> oder telefonisch
@@ -34,8 +33,8 @@
         Datum und Uhrzeit, aufgerufene Adresse, Browser und Betriebssystem sowie die zuvor besuchte Seite. Diese
         Daten sind erforderlich, um die Website auszuliefern, ihre Sicherheit zu gewährleisten und Fehler zu
         beheben. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und stabilen Betrieb
-        (Art. 6 Abs. 1 lit. f DSGVO). Die Protokolle werden nicht mit anderen Daten zusammengeführt und nach
-        <mark class="legal-todo">[BITTE PRÜFEN: Speicherdauer der Server-Logs beim Hosting-Dienstleister und bei Cloudflare]</mark> gelöscht.
+        (Art. 6 Abs. 1 lit. f DSGVO). Die Protokolle werden nicht mit anderen Daten zusammengeführt und
+        spätestens nach 30 Tagen automatisch gelöscht.
       </p>
       <h3>Hosting</h3>
       <p>
@@ -51,8 +50,8 @@
         zwischen und schützt die Website vor Angriffen. Dabei verarbeitet Cloudflare insbesondere Ihre IP-Adresse
         und die technischen Verbindungsdaten. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren
         und schnellen Auslieferung (Art. 6 Abs. 1 lit. f DSGVO). Auch hier kann es zu einer Übermittlung in die
-        USA kommen; Grundlage ist
-        <mark class="legal-todo">[BITTE PRÜFEN: EU-US Data Privacy Framework / Standardvertragsklauseln]</mark>.
+        USA kommen. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert; für die USA besteht
+        damit ein Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
       </p>
 
       <h2>3. Cookies und lokaler Speicher</h2>
@@ -98,9 +97,9 @@
       <p>
         Ihre Nachrichten bewahren wir auf, solange es für die Bearbeitung nötig ist; Unterlagen zu Verkäufen
         (z. B. von Publikationen) im Rahmen der gesetzlichen Aufbewahrungspflichten (7 Jahre, § 132 BAO).
-        <mark class="legal-todo">[BITTE PRÜFEN: Aufbewahrungsdauer von E-Mails]</mark>
-        Das E-Mail-Postfach wird betrieben von
-        <mark class="legal-todo">[BITTE ERGÄNZEN: E-Mail-Anbieter des Postfachs <%= site.email %>]</mark>.
+        Unser E-Mail-Postfach wird bei Google Workspace (Google Ireland Limited, Gordon House, Barrow Street,
+        Dublin 4, Irland) als Auftragsverarbeiter betrieben. Dabei kann es zu einer Übermittlung an Google LLC
+        in den USA kommen; Google ist nach dem EU-US Data Privacy Framework zertifiziert (Art. 45 DSGVO).
       </p>
 
       <h2>6. Links zu anderen Websites</h2>
@@ -111,15 +110,23 @@
         Anbieter übertragen. Erst wenn Sie einen Link anklicken, verlassen Sie unsere Website; dort gelten die
         Datenschutzbestimmungen des jeweiligen Anbieters.
       </p>
+      <h3>Unsere Facebook-Seite</h3>
       <p>
-        <mark class="legal-todo">[BITTE PRÜFEN: ggf. Hinweis zur eigenen Facebook-Seite (gemeinsame Verantwortung mit Meta für Seiten-Statistiken, Art. 26 DSGVO)]</mark>
+        Wenn Sie unsere Facebook-Seite besuchen, verarbeitet Meta Platforms Ireland Ltd. Ihre Daten nach deren
+        eigenen Datenschutzbestimmungen. Für die Seiten-Statistiken („Insights“), die Meta uns in anonymisierter
+        Form zur Verfügung stellt, sind wir gemeinsam mit Meta verantwortlich (Art. 26 DSGVO). Die wesentlichen
+        Inhalte dieser Vereinbarung finden Sie unter
+        <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">facebook.com/legal/terms/page_controller_addendum</a>.
+        Ihre Rechte können Sie direkt bei Meta geltend machen.
       </p>
 
       <h2>7. Personen und Werke auf der Website</h2>
       <p>
         Auf der Website zeigen wir Namen und Fotos unseres Teams sowie Namen, Werke und Fotos von Künstlerinnen
         und Künstlern und von Ausstellungen. Das dient der Information über den Verein und sein Kulturprogramm.
-        <mark class="legal-todo">[BITTE PRÜFEN: Rechtsgrundlage, z. B. Einwilligung der abgebildeten Personen bzw. Vereinbarung mit den Künstler:innen]</mark>
+        Rechtsgrundlage ist die Einwilligung der Betroffenen bzw. die Vereinbarung mit den ausstellenden
+        Künstlerinnen und Künstlern (Art. 6 Abs. 1 lit. a und b DSGVO) sowie unser berechtigtes Interesse an der
+        Dokumentation unserer Veranstaltungen (Art. 6 Abs. 1 lit. f DSGVO).
         Wenn Sie auf einem Foto zu sehen sind und dies nicht möchten, wenden Sie sich bitte an uns.
       </p>
 
@@ -148,7 +155,7 @@
         <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>.
       </p>
 
-      <p class="note">Stand: <mark class="legal-todo">[BITTE PRÜFEN: Datum der Veröffentlichung]</mark></p>
+      <p class="note">Stand: Oktober 2026</p>
     </div>
   </section>
 </main>
