@@ -1,10 +1,9 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 <%
-// ENTWURF – beschreibt die Datenverarbeitungen, die im Code dieser Website tatsächlich vorkommen
-// (Hosting auf Railway, Cloudflare, FS Consent, Admin-Sitzungs-Cookie, lokal geladene Schriften,
-// Kontakt per E-Mail/Telefon bzw. mailto-Formular, Links zu Google Maps/Facebook u. a.).
-// Markierte Stellen ([BITTE …]) vor dem Livegang prüfen bzw. ergänzen und die Markierung entfernen.
+// Beschreibt die Datenverarbeitungen, die im Code dieser Website tatsächlich vorkommen (externer Hosting-
+// Dienstleister, Cloudflare, FS Consent, Admin-Sitzungs-Cookie, lokal geladene Schriften, Kontakt per
+// E-Mail/Telefon bzw. mailto-Formular, Postfach über Google Workspace, Links zu Google Maps/Facebook u. a.).
 %>
 <main>
   <section class="page-head">
@@ -18,9 +17,8 @@
     <div class="container narrow legal">
       <h2>1. Verantwortlicher</h2>
       <p>
-        Verantwortlich für die Datenverarbeitung auf dieser Website ist der Verein <%= site.orgName %>
-        <mark class="legal-todo">[BITTE PRÜFEN: exakter Vereinsname]</mark>, <%= site.address %>,
-        ZVR-Zahl <%= site.zvr %>.
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist der Verein MAP (Montafoner Artgenossen
+        Plattform), Auweg 52, 6780 Schruns, Österreich, ZVR-Zahl <%= site.zvr %>.
       </p>
       <p>
         Sie erreichen uns per E-Mail an <a href="mailto:<%= site.email %>"><%= site.email %></a> oder telefonisch
@@ -126,8 +124,11 @@
       <p>
         Auf der Website zeigen wir Namen und Fotos unseres Teams sowie Namen, Werke und Fotos von Künstlerinnen
         und Künstlern und von Ausstellungen. Das dient der Information über den Verein und sein Kulturprogramm.
-        <mark class="legal-todo">[BITTE PRÜFEN: Rechtsgrundlage, z. B. Einwilligung der abgebildeten Personen bzw. Vereinbarung mit den Künstler:innen]</mark>
-        Wenn Sie auf einem Foto zu sehen sind und dies nicht möchten, wenden Sie sich bitte an uns.
+        Werke und Ausstellungsfotos veröffentlichen wir mit Zustimmung der Künstlerinnen und Künstler im Rahmen der
+        jeweiligen Ausstellung. Fotos von Personen veröffentlichen wir auf Grundlage unseres berechtigten Interesses,
+        die Arbeit des Vereins öffentlich darzustellen (Art. 6 Abs. 1 lit. f DSGVO). Wenn Sie auf einem Foto zu
+        sehen sind und dies nicht möchten, können Sie widersprechen (Art. 21 DSGVO): Wenden Sie sich bitte an uns,
+        wir entfernen das Bild dann.
       </p>
 
       <h2>8. Empfänger</h2>
@@ -155,7 +156,7 @@
         <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>.
       </p>
 
-      <p class="note">Stand: <mark class="legal-todo">[BITTE PRÜFEN: Datum der Veröffentlichung]</mark></p>
+      <p class="note">Stand: Oktober 2026</p>
     </div>
   </section>
 </main>
