@@ -29,7 +29,7 @@ var vorsitz = (team || []).filter(function (t) { return /^(obmann|obfrau)$/i.tes
         <dt>ZVR-Zahl</dt>
         <dd><%= site.zvr %></dd>
         <dt>Vereinsbehörde</dt>
-        <dd><mark class="legal-todo">[BITTE PRÜFEN: zuständige Vereinsbehörde (Bezirkshauptmannschaft Bludenz?)]</mark></dd>
+        <dd>Bezirkshauptmannschaft Bludenz</dd>
         <dt>Vertreten durch</dt>
         <dd>
           <% if (vorsitz) { %><%= vorsitz.name %>, <%= vorsitz.role %><% } %>
